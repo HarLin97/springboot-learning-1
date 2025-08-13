@@ -17,6 +17,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 @Configuration
@@ -85,7 +86,7 @@ public class HttpClientConfig {
         List<HttpMessageConverter<?>> list = template.getMessageConverters();
         for (HttpMessageConverter<?> mc : list) {
             if (mc instanceof StringHttpMessageConverter) {
-                ((StringHttpMessageConverter) mc).setDefaultCharset(Charset.forName("UTF-8"));
+                ((StringHttpMessageConverter) mc).setDefaultCharset(StandardCharsets.UTF_8);
             }
         }
         return template;

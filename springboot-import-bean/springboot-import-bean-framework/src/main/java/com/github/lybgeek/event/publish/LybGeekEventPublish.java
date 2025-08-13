@@ -8,7 +8,7 @@ import org.springframework.core.ResolvableType;
 
 public class LybGeekEventPublish {
 
-    private LybGeekApplicationEventMulticaster lybGeekApplicationEventMulticaster;
+    private final LybGeekApplicationEventMulticaster lybGeekApplicationEventMulticaster;
 
     public LybGeekEventPublish(LybGeekApplicationEventMulticaster lybGeekApplicationEventMulticaster) {
         this.lybGeekApplicationEventMulticaster = lybGeekApplicationEventMulticaster;

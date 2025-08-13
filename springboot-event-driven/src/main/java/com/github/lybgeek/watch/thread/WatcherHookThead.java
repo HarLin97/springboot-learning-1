@@ -7,9 +7,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class WatcherHookThead implements Runnable {
-	private static Logger logger = LoggerFactory.getLogger(WatcherHookThead.class);
+	private static final Logger logger = LoggerFactory.getLogger(WatcherHookThead.class);
 
-	private WatchService watchService;
+	private final WatchService watchService;
 
 	public WatcherHookThead(WatchService watchService) {
 		super();

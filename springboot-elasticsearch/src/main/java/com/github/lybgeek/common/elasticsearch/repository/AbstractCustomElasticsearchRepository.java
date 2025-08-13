@@ -24,9 +24,9 @@ import org.springframework.util.Assert;
 @Slf4j
 public abstract class AbstractCustomElasticsearchRepository <T, ID> implements CustomElasticsearchRepository<T, ID>{
 
-  private Map<String,String> indexNameMap = new ConcurrentHashMap<>();
+  private final Map<String,String> indexNameMap = new ConcurrentHashMap<>();
 
-  private Map<String,String> idMap = new ConcurrentHashMap<>();
+  private final Map<String,String> idMap = new ConcurrentHashMap<>();
 
   protected ElasticsearchHelper elasticsearchHelper;
 
@@ -98,7 +98,7 @@ public abstract class AbstractCustomElasticsearchRepository <T, ID> implements C
   @Override
   public boolean deleteById(ID id) {
     Collection<ID> idList = new ArrayList<>();
-    ((ArrayList<ID>) idList).add(id);
+    idList.add(id);
     return deleteBatch(idList);
   }
 

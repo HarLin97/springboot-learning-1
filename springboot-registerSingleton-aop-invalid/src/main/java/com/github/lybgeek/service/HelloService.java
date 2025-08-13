@@ -8,7 +8,7 @@ public class HelloService {
 
     private String beanName;
 
-    private HelloServiceProperties helloServiceProperties;
+    private final HelloServiceProperties helloServiceProperties;
 
     public HelloService(HelloServiceProperties helloServiceProperties) {
         this.helloServiceProperties = helloServiceProperties;

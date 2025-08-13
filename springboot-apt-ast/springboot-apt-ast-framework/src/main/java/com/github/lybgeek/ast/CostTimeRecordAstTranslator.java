@@ -19,9 +19,9 @@ public class CostTimeRecordAstTranslator extends AbstractTreeTranslator{
     /**
      * 有标注CostTimeRecord的方法
      */
-    private JCTree.JCMethodDecl methodDecl;
+    private final JCTree.JCMethodDecl methodDecl;
 
-    private JCTree.JCClassDecl classDecl;
+    private final JCTree.JCClassDecl classDecl;
 
 
     public CostTimeRecordAstTranslator(TreeMaker treeMaker, Names names, Messager meessager,JCTree.JCClassDecl classDecl, JCTree.JCMethodDecl methodDecl) {

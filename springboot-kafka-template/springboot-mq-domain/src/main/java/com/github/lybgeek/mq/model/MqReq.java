@@ -11,9 +11,9 @@ import java.io.Serializable;
 
 public class MqReq <T extends MqAccess> implements Serializable {
 
-    private String topic;
+    private final String topic;
 
-    private T data;
+    private final T data;
 
 
     public MqReq(String topic, T data) {

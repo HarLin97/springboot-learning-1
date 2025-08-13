@@ -55,7 +55,7 @@ public class UserServiceBufferTriggerImpl implements UserService, InitializingBe
     public void afterPropertiesSet() throws Exception {
         // key为业务属性唯一键，如果不存在业务属性唯一键，则可以取bizNo作为key，示例以username作为唯一键
         Map<String, CompletableFuture<Result<User>>> completableFutureMap = new HashMap<>();
-        batchConsumerTriggerHandler = batchConsumerTriggerFactory.getTriggerHandler((ThrowableConsumer<List<DataExchange<UserDTO, User>>, Exception>) dataExchanges -> {
+        batchConsumerTriggerHandler = batchConsumerTriggerFactory.getTriggerHandler(dataExchanges -> {
             List<UserDTO> userDTOs = new ArrayList<>();
             for (DataExchange<UserDTO, User> dataExchange : dataExchanges) {
                 UserDTO userDTO = dataExchange.getRequest();

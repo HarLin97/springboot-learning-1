@@ -108,7 +108,7 @@ public class HttpClientAppliactionTest {
         param.put("bookName","测试");
         Map<String,String> headers = new HashMap<>();
         headers.put("AccessToken","123456");
-        ResponseEntity<String> response =  restTemplateUtil.post(url,headers,param,String.class,new Object[]{});
+        ResponseEntity<String> response =  restTemplateUtil.post(url,headers,param,String.class);
         System.out.println(response.getBody());
 
     }

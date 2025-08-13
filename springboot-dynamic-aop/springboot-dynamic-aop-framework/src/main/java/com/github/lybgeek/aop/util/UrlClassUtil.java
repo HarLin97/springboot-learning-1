@@ -15,9 +15,9 @@ public final class UrlClassUtil {
 
     private UrlClassUtil(){}
 
-    private static Map<String,Class> targetClzMap = new ConcurrentHashMap<>();
+    private static final Map<String,Class> targetClzMap = new ConcurrentHashMap<>();
 
-    private static Map<String,Object> targetObjMap = new ConcurrentHashMap<>();
+    private static final Map<String,Object> targetObjMap = new ConcurrentHashMap<>();
 
     @SneakyThrows
     public static Class getClz(String targetClassUrl, String className){

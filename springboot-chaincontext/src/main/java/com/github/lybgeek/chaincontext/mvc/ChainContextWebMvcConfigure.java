@@ -10,7 +10,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  */
 public class ChainContextWebMvcConfigure implements WebMvcConfigurer {
 
-    private ChainContexthandlerInterceptor chainContexthandlerInterceptor;
+    private final ChainContexthandlerInterceptor chainContexthandlerInterceptor;
 
     public ChainContextWebMvcConfigure(ChainContexthandlerInterceptor chainContexthandlerInterceptor) {
         this.chainContexthandlerInterceptor = chainContexthandlerInterceptor;

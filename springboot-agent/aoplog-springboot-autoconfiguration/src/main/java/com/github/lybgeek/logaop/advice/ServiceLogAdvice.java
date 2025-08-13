@@ -13,7 +13,7 @@ import java.lang.reflect.Method;
 @Slf4j
 public class ServiceLogAdvice implements MethodInterceptor {
 
-    private LogService logService;
+    private final LogService logService;
 
     public ServiceLogAdvice(LogService logService) {
         this.logService = logService;

@@ -27,7 +27,7 @@ import java.util.concurrent.Executors;
 public class GroovyAutoConfiguration implements ApplicationRunner, ApplicationContextAware {
 
     private ApplicationContext applicationContext;
-    private ExecutorService service = Executors.newSingleThreadExecutor(r -> {
+    private final ExecutorService service = Executors.newSingleThreadExecutor(r -> {
         Thread thread = new Thread(r);
         thread.setName("groovyFileManager-thread");
         return thread;

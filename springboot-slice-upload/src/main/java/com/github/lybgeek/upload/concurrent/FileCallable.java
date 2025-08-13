@@ -9,9 +9,9 @@ import java.util.concurrent.Callable;
 
 public class FileCallable implements Callable<FileUploadDTO> {
 
-  private UploadModeEnum mode;
+  private final UploadModeEnum mode;
 
-  private FileUploadRequestDTO param;
+  private final FileUploadRequestDTO param;
 
   public FileCallable(UploadModeEnum mode,
       FileUploadRequestDTO param) {

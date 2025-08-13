@@ -28,7 +28,7 @@ public class AutoComponentProcessor extends AbstractComponentProcessor {
      */
     private Elements elementUtils;
 
-    private Set<String> componentClassNames = new ConcurrentSkipListSet<>();
+    private final Set<String> componentClassNames = new ConcurrentSkipListSet<>();
 
     @Override
     public synchronized void init(ProcessingEnvironment processingEnv) {

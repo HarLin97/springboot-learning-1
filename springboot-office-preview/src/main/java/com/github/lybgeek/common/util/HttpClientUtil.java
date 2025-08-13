@@ -3,6 +3,7 @@ package com.github.lybgeek.common.util;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -42,7 +43,7 @@ public enum HttpClientUtil {
       httpPost.setConfig(requestConfig);
 
       MultipartEntityBuilder multipartEntityBuilder = MultipartEntityBuilder.create();
-      multipartEntityBuilder.setCharset(Charset.forName("utf-8"));
+      multipartEntityBuilder.setCharset(StandardCharsets.UTF_8);
       multipartEntityBuilder.setMode(HttpMultipartMode.BROWSER_COMPATIBLE);
 
       if(Objects.nonNull(params) && !params.isEmpty()){

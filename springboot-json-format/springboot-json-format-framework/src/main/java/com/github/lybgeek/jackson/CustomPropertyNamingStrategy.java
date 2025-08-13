@@ -32,10 +32,7 @@ public class CustomPropertyNamingStrategy extends PropertyNamingStrategy {
     }
 
     private boolean isSpecialPropertyName(String defaultName) {
-        if(defaultName.startsWith(DATE_PREFIX) || defaultName.startsWith(BIZ_PREFIX) || defaultName.startsWith(NUM_PREFIX)){
-            return true;
-        }
-        return false;
+        return defaultName.startsWith(DATE_PREFIX) || defaultName.startsWith(BIZ_PREFIX) || defaultName.startsWith(NUM_PREFIX);
     }
 
 

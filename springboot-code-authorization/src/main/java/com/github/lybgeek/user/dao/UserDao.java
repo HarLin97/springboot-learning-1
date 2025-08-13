@@ -22,9 +22,9 @@ import java.util.stream.Collectors;
 @Repository
 public class UserDao  {
 
-    private static Map<Long, User> mockUserTable = new ConcurrentHashMap<>();
+    private static final Map<Long, User> mockUserTable = new ConcurrentHashMap<>();
 
-    private static LongAdder idGen = new LongAdder();
+    private static final LongAdder idGen = new LongAdder();
 
     public List<User> list() {
         Collection<User> users = mockUserTable.values();

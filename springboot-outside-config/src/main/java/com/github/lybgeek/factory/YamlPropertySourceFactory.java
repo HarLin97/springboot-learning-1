@@ -16,7 +16,7 @@ public class YamlPropertySourceFactory implements PropertySourceFactory {
     public PropertySource<?> createPropertySource(String sourceName, EncodedResource resource) throws IOException {
         Properties propertiesFromYaml = loadYaml(resource);
         if(StringUtils.isBlank(sourceName)){
-            sourceName =  resource.getResource().getFilename();;
+            sourceName =  resource.getResource().getFilename();
         }
 
         return new PropertiesPropertySource(sourceName, propertiesFromYaml);

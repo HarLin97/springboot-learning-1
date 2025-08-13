@@ -16,7 +16,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class CommunicationsUnHealthEventListener {
 
     private final ExecutorService executorService = Executors.newFixedThreadPool(10, new ThreadFactory() {
-        private AtomicInteger atomicInteger = new AtomicInteger();
+        private final AtomicInteger atomicInteger = new AtomicInteger();
         @Override
         public Thread newThread(Runnable r) {
             return new Thread(r,"conn-unHealth-pool-" + atomicInteger.getAndIncrement());

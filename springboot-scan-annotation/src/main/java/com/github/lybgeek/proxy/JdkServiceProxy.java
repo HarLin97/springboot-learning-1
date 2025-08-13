@@ -16,7 +16,7 @@ import java.lang.reflect.Proxy;
 @Slf4j
 public class JdkServiceProxy implements InvocationHandler {
 
-    private Class<?> targetClz;
+    private final Class<?> targetClz;
 
     public JdkServiceProxy(Class<?> targetClz){
         this.targetClz = targetClz;

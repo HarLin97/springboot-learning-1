@@ -29,6 +29,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
 
 
 @Slf4j
@@ -63,7 +64,7 @@ public class DefaultBlockExceptionHandler implements BlockExceptionHandler {
         result.setMessage(msg);
 
         OutputStream out = response.getOutputStream();
-        out.write(JSON.toJSONString(result).getBytes("utf-8"));
+        out.write(JSON.toJSONString(result).getBytes(StandardCharsets.UTF_8));
         out.flush();
         out.close();
     }

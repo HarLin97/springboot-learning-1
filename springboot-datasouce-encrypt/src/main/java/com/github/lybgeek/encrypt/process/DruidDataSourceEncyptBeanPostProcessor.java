@@ -11,9 +11,9 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 
 public class DruidDataSourceEncyptBeanPostProcessor implements BeanPostProcessor {
 
-    private CustomEncryptProperties customEncryptProperties;
+    private final CustomEncryptProperties customEncryptProperties;
 
-    private DataSourceProperties dataSourceProperties;
+    private final DataSourceProperties dataSourceProperties;
 
     public DruidDataSourceEncyptBeanPostProcessor(CustomEncryptProperties customEncryptProperties, DataSourceProperties dataSourceProperties) {
         this.customEncryptProperties = customEncryptProperties;

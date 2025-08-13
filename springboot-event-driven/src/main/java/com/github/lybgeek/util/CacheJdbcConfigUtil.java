@@ -14,7 +14,7 @@ public enum CacheJdbcConfigUtil {
 
     public final String cacheKey = "jdbcKey";
 
-    private AtomicInteger atomicInteger = new AtomicInteger();
+    private final AtomicInteger atomicInteger = new AtomicInteger();
 
     public void put(JdbcConfig jdbcConfig){
         cache.put(cacheKey,jdbcConfig);

@@ -279,7 +279,7 @@ public class FileUtil extends FileUtils {
     if (f.exists() && f.isDirectory()) {//判断是文件还是目录
       if (f.listFiles().length != 0) {
         //若有则把文件放进数组，并判断是否有下级目录
-        File delFile[] = f.listFiles();
+        File[] delFile = f.listFiles();
         int i = f.listFiles().length;
         for (int j = 0; j < i; j++) {
           if (delFile[j].isDirectory()) {
@@ -533,7 +533,7 @@ public class FileUtil extends FileUtils {
         public Object run() {
 
           try {
-            Method getCleanerMethod = mappedByteBuffer.getClass().getMethod("cleaner", new Class[0]);
+            Method getCleanerMethod = mappedByteBuffer.getClass().getMethod("cleaner");
             getCleanerMethod.setAccessible(true);
             Cleaner cleaner = (Cleaner) getCleanerMethod.invoke(mappedByteBuffer,
                 new Object[0]);
@@ -557,7 +557,7 @@ public class FileUtil extends FileUtils {
       public Object run() {
 
         try {
-          Method getCleanerMethod = buffer.getClass().getMethod("cleaner", new Class[0]);
+          Method getCleanerMethod = buffer.getClass().getMethod("cleaner");
           getCleanerMethod.setAccessible(true);
           Cleaner cleaner = (Cleaner) getCleanerMethod.invoke(buffer, new Object[0]);
           cleaner.clean();

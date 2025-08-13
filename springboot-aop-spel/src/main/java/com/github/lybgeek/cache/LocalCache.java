@@ -8,7 +8,7 @@ public enum LocalCache {
 
     INSTANCE;
 
-    private  Map<String,Object> localCacheMap = new ConcurrentHashMap<>();
+    private final Map<String,Object> localCacheMap = new ConcurrentHashMap<>();
 
     public void put(String key,Object obj){
         localCacheMap.put(key,obj);

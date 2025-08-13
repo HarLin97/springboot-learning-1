@@ -13,9 +13,9 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class CustomRoundRobinRule extends AbstractLoadBalancerRule {
-    private AtomicInteger nextServerCyclicCounter;
+    private final AtomicInteger nextServerCyclicCounter;
 
-    private static Logger log = LoggerFactory.getLogger(RoundRobinRule.class);
+    private static final Logger log = LoggerFactory.getLogger(RoundRobinRule.class);
 
     public CustomRoundRobinRule() {
         nextServerCyclicCounter = new AtomicInteger(0);

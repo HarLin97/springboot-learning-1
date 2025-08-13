@@ -5,7 +5,7 @@ import java.util.Random;
 
 public final class PrintUtils {
 
-    private static Random random = new Random();
+    private static final Random random = new Random();
 
     private PrintUtils(){}
 

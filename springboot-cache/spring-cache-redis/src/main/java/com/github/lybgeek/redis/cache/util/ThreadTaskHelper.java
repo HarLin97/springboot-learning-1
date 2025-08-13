@@ -11,9 +11,9 @@ import java.util.concurrent.Executors;
  */
 public class ThreadTaskHelper {
 
-    private static ExecutorService executorService = Executors.newFixedThreadPool(20);
+    private static final ExecutorService executorService = Executors.newFixedThreadPool(20);
 
-    private static Map RUNNING_REFRESH_CACHE = new ConcurrentHashMap();
+    private static final Map RUNNING_REFRESH_CACHE = new ConcurrentHashMap();
 
     public static Map<String, String> getRunningRefreshCache(){
         return RUNNING_REFRESH_CACHE;

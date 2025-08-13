@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 public class EnumConstraintValidator implements ConstraintValidator<EnumValid, Object> {
  
 
-    private List<Object> values = new ArrayList<>();
+    private final List<Object> values = new ArrayList<>();
 
     @Override
     public void initialize(EnumValid enumValidator) {
@@ -43,6 +43,6 @@ public class EnumConstraintValidator implements ConstraintValidator<EnumValid, O
 
     @Override
     public boolean isValid(Object value, ConstraintValidatorContext constraintValidatorContext) {
-        return Objects.isNull(value) || values.contains(value) ? true : false;
+        return Objects.isNull(value) || values.contains(value);
     }
 }

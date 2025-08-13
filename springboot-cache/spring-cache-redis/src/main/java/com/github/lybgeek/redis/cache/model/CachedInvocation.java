@@ -10,7 +10,7 @@ import java.util.Arrays;
  */
 public final class CachedInvocation {
 
-    private Object key;
+    private final Object key;
     private final Object targetBean;
     private final Method targetMethod;
     private Object[] arguments;

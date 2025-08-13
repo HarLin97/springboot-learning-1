@@ -5,7 +5,7 @@
     <parent>
         <artifactId>springboot-learning</artifactId>
         <groupId>com.github.lybgeek</groupId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.1-SNAPSHOT</version>A
     </parent>
     <modelVersion>4.0.0</modelVersion>
 	 <packaging>pom</packaging>

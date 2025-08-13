@@ -6,5 +6,5 @@ import lombok.Getter;
 @AllArgsConstructor
 @Getter
 public enum  HttpclientTypeEnum {
-    REST_TEMPLATE,WEB_CLIENT,HTTP_CLIENT;
+    REST_TEMPLATE,WEB_CLIENT,HTTP_CLIENT
 }

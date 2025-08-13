@@ -15,8 +15,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 public abstract class AbstractMqHandler {
 
 
-    private ExecutorService executorService = Executors.newFixedThreadPool(5, new ThreadFactory() {
-        private AtomicInteger atomicInteger = new AtomicInteger();
+    private final ExecutorService executorService = Executors.newFixedThreadPool(5, new ThreadFactory() {
+        private final AtomicInteger atomicInteger = new AtomicInteger();
         @Override
         public Thread newThread(Runnable runnable) {
             Thread thread = new Thread(runnable);

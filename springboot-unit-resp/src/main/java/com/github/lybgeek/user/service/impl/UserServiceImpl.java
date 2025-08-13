@@ -22,9 +22,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserConvert userConvert;
 
-    private static Map<Long, User> mockUserTable = new ConcurrentHashMap<>();
+    private static final Map<Long, User> mockUserTable = new ConcurrentHashMap<>();
 
-    private static LongAdder idGen = new LongAdder();
+    private static final LongAdder idGen = new LongAdder();
 
     @Override
     public UserDTO getUserById(Long id) {

@@ -34,11 +34,11 @@ public class DowngradeApplicationTest {
   @Qualifier("helloService")
   private HelloService helloService;
 
-  private ExecutorService executorService = Executors.newFixedThreadPool(5);
+  private final ExecutorService executorService = Executors.newFixedThreadPool(5);
 
   private ExecutorService controllerExecutorService;
 
-  private AtomicInteger atomicInteger = new AtomicInteger(0);
+  private final AtomicInteger atomicInteger = new AtomicInteger(0);
 
   @Autowired
   private WebApplicationContext wac;

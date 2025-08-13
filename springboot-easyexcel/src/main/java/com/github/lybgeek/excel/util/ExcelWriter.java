@@ -20,23 +20,23 @@ import org.apache.commons.lang3.StringUtils;
 @Builder
 public class ExcelWriter {
 
-  private HttpServletResponse response;
+  private final HttpServletResponse response;
 
-  private String sheetName;
+  private final String sheetName;
 
   private String fileName;
 
-  private OutputStream outputStream;
+  private final OutputStream outputStream;
 
   /**
    * 如果你的模板有list,且list不是最后一行，下面还有数据需要填充 就必须设置 forceNewRow=true 但是这个就会把所有数据放到内存 会很耗内存
    */
-  private boolean forceNewRow;
+  private final boolean forceNewRow;
 
   /**
    * 填充模板字段比如{abc}
    */
-  private Map<String,Object> templateParamsMap;
+  private final Map<String,Object> templateParamsMap;
 
 
 
@@ -45,7 +45,7 @@ public class ExcelWriter {
   }
 
   public static com.alibaba.excel.write.builder.ExcelWriterBuilder write(File file) {
-    return write((File)file, (Class)null);
+    return write(file, null);
   }
 
   public static com.alibaba.excel.write.builder.ExcelWriterBuilder write(File file, Class head) {
@@ -59,7 +59,7 @@ public class ExcelWriter {
   }
 
   public static com.alibaba.excel.write.builder.ExcelWriterBuilder write(String pathName) {
-    return write((String)pathName, (Class)null);
+    return write(pathName, null);
   }
 
   public static com.alibaba.excel.write.builder.ExcelWriterBuilder write(String pathName, Class head) {
@@ -73,7 +73,7 @@ public class ExcelWriter {
   }
 
   public static com.alibaba.excel.write.builder.ExcelWriterBuilder write(OutputStream outputStream) {
-    return write((OutputStream)outputStream, (Class)null);
+    return write(outputStream, null);
   }
 
   public static com.alibaba.excel.write.builder.ExcelWriterBuilder write(OutputStream outputStream, Class head) {
@@ -87,15 +87,15 @@ public class ExcelWriter {
   }
 
   public static ExcelWriterSheetBuilder writerSheet() {
-    return writerSheet((Integer)null, (String)null);
+    return writerSheet(null, null);
   }
 
   public static ExcelWriterSheetBuilder writerSheet(Integer sheetNo) {
-    return writerSheet(sheetNo, (String)null);
+    return writerSheet(sheetNo, null);
   }
 
   public static ExcelWriterSheetBuilder writerSheet(String sheetName) {
-    return writerSheet((Integer)null, sheetName);
+    return writerSheet(null, sheetName);
   }
 
   public static ExcelWriterSheetBuilder writerSheet(Integer sheetNo, String sheetName) {
@@ -112,7 +112,7 @@ public class ExcelWriter {
   }
 
   public static ExcelWriterTableBuilder writerTable() {
-    return writerTable((Integer)null);
+    return writerTable(null);
   }
 
   public static ExcelWriterTableBuilder writerTable(Integer tableNo) {

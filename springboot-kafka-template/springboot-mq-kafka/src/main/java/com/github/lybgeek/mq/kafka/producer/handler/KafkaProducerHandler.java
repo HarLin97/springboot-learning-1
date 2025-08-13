@@ -17,7 +17,7 @@ import java.util.concurrent.CountDownLatch;
 @Slf4j
 public class KafkaProducerHandler extends AbstractMqHandler {
 
-    private KafkaTemplate kafkaTemplate;
+    private final KafkaTemplate kafkaTemplate;
 
     public KafkaProducerHandler(KafkaTemplate kafkaTemplate) {
         this.kafkaTemplate = kafkaTemplate;

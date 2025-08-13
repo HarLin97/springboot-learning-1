@@ -13,7 +13,7 @@ import java.net.UnknownHostException;
 @Slf4j
 public final class SnowflakeUtils {
 
-    private static Snowflake snowflake;
+    private static final Snowflake snowflake;
 
 
     static {

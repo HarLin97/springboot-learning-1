@@ -16,9 +16,9 @@ public class JobRpcExecutor {
     @Autowired
     private RpcClientService rpcClientService;
 
-    private AtomicLong requestIdAtomic = new AtomicLong(1);
+    private final AtomicLong requestIdAtomic = new AtomicLong(1);
 
-    private AtomicLong userIdAtomic = new AtomicLong(1);
+    private final AtomicLong userIdAtomic = new AtomicLong(1);
 
     //@Scheduled(cron = "0 */2 * * * ?")
     @Scheduled(fixedDelay = 6000)

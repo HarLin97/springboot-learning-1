@@ -7,7 +7,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 public class MockJarWebMvcConfigurer implements WebMvcConfigurer {
 
-    private MockJarInterHandlerInterceptor mockJarInterHandlerInterceptor;
+    private final MockJarInterHandlerInterceptor mockJarInterHandlerInterceptor;
 
     public MockJarWebMvcConfigurer(MockJarInterHandlerInterceptor mockJarInterHandlerInterceptor) {
         this.mockJarInterHandlerInterceptor = mockJarInterHandlerInterceptor;

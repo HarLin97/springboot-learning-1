@@ -5,7 +5,7 @@ import com.google.common.eventbus.EventBus;
 
 public class EventBusHelper {
 
-    private static EventBus eventBus = new EventBus();
+    private static final EventBus eventBus = new EventBus();
 
 
     private EventBusHelper() {

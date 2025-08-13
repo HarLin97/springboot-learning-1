@@ -23,7 +23,7 @@ public final class HttpRequestParserUtils {
 
     public static final String COMMA = ".";
 
-    private static AntPathMatcher antPathMatcher = new AntPathMatcher();
+    private static final AntPathMatcher antPathMatcher = new AntPathMatcher();
 
 
     private HttpRequestParserUtils() {

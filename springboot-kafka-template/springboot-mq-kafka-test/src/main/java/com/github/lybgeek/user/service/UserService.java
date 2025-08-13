@@ -8,7 +8,7 @@ public interface UserService extends IService<User> {
 
     void saveAndPush(User user);
 
-    public boolean isExistUserByUsername(String username);
+    boolean isExistUserByUsername(String username);
 
 
 

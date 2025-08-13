@@ -15,7 +15,7 @@ public class ConcurrentCall {
     private final CountDownLatch threadDownLatch = new CountDownLatch(1);
 
 
-    private ExecutorService executorService;
+    private final ExecutorService executorService;
 
 
     public ConcurrentCall(int threadNum){

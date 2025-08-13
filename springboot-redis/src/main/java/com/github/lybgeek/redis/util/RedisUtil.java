@@ -22,7 +22,7 @@ import org.springframework.util.CollectionUtils;
 @Component
 public final class RedisUtil {
 
-    private static Logger logger = LoggerFactory.getLogger(RedisUtil.class);
+    private static final Logger logger = LoggerFactory.getLogger(RedisUtil.class);
 
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;

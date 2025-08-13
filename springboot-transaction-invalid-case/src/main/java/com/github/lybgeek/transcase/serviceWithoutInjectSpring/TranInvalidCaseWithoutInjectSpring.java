@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 public class TranInvalidCaseWithoutInjectSpring {
 
-    private UserService userService;
+    private final UserService userService;
 
     public TranInvalidCaseWithoutInjectSpring(UserService userService) {
         this.userService = userService;

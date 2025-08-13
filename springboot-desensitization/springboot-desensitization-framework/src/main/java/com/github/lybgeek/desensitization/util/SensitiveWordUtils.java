@@ -12,6 +12,7 @@ import java.net.JarURLConnection;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.jar.JarFile;
 
@@ -150,7 +151,7 @@ public class SensitiveWordUtils {
      * @throws IOException
      */
     private static void loadSenitiveWordSet(Set<String> sensitiveWordSet, File wordFile) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(wordFile), "utf-8"));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(wordFile), StandardCharsets.UTF_8));
         String line;
         while ((line = reader.readLine()) != null) {
             sensitiveWordSet.add(line);
@@ -160,7 +161,7 @@ public class SensitiveWordUtils {
     }
 
     private static void loadSenitiveWordSet(Set<String> sensitiveWordSet, InputStream inputStream) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, "utf-8"));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, StandardCharsets.UTF_8));
         String line;
         while ((line = reader.readLine()) != null) {
             sensitiveWordSet.add(line);

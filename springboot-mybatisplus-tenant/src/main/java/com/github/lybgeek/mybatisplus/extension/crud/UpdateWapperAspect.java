@@ -29,7 +29,7 @@ public class UpdateWapperAspect implements ApplicationContextAware {
 
     private ApplicationContext applicationContext;
 
-    private  Map<String,Object> entityMap = new HashMap<>();
+    private final Map<String,Object> entityMap = new HashMap<>();
 
     @Pointcut("execution(* com.baomidou.mybatisplus.extension.service.IService.update(com.baomidou.mybatisplus.core.conditions.Wrapper))")
     public void pointcut(){

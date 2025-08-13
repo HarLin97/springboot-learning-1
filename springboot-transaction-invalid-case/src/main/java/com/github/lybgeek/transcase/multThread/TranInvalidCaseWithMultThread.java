@@ -20,7 +20,7 @@ public class TranInvalidCaseWithMultThread {
     @Autowired
     private UserService userService;
 
-    private ExecutorService executorService = Executors.newSingleThreadExecutor();
+    private final ExecutorService executorService = Executors.newSingleThreadExecutor();
 
     @Transactional(rollbackFor = Exception.class)
     public boolean save(User user) throws ExecutionException, InterruptedException {

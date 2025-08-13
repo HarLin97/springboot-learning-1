@@ -32,7 +32,7 @@ public class HystrixAspect {
     /**
      * 缓存方法第一次执行的HystrixProperty的value，key为类名+方法名+HystrixPropertyName
      */
-    private Map<String,String> firstHystrixPropertyMap = new ConcurrentHashMap<>();
+    private final Map<String,String> firstHystrixPropertyMap = new ConcurrentHashMap<>();
 
     @Before(value = "@annotation(hystrixCommand)")
     public void before(JoinPoint jp, HystrixCommand hystrixCommand){

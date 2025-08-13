@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 
 public class UserHandlerMethodArgumentResolver implements HandlerMethodArgumentResolver {
 
-    private HandlerMethodArgumentResolver handlerMethodArgumentResolver;
+    private final HandlerMethodArgumentResolver handlerMethodArgumentResolver;
 
     public UserHandlerMethodArgumentResolver(HandlerMethodArgumentResolver handlerMethodArgumentResolver) {
         this.handlerMethodArgumentResolver = handlerMethodArgumentResolver;

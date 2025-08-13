@@ -43,7 +43,7 @@ public class FileServiceImpl implements FileService {
   private FilePathUtil filePathUtil;
 
 
-  private AtomicInteger atomicInteger = new AtomicInteger(0);
+  private final AtomicInteger atomicInteger = new AtomicInteger(0);
 
 
   private final ExecutorService executorService = Executors.newFixedThreadPool(

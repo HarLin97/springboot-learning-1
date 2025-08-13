@@ -212,7 +212,7 @@ public class FileUtil extends FileUtils {
     if (f.exists() && f.isDirectory()) {//判断是文件还是目录
       if (f.listFiles().length != 0) {
         //若有则把文件放进数组，并判断是否有下级目录
-        File delFile[] = f.listFiles();
+        File[] delFile = f.listFiles();
         int i = f.listFiles().length;
         for (int j = 0; j < i; j++) {
           if (delFile[j].isDirectory()) {

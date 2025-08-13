@@ -17,9 +17,9 @@ import java.util.concurrent.TimeUnit;
 
 public class LettuceRedisTemplate{
 
-    private RedisClient redisClient;
+    private final RedisClient redisClient;
 
-    private Map<String,String> clientCache = new ConcurrentHashMap<>();
+    private final Map<String,String> clientCache = new ConcurrentHashMap<>();
 
 
     public LettuceRedisTemplate(RedisClient redisClient) {

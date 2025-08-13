@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class DeadLockServiceImpl implements DeadLockService {
 
-    private Object lockOne = new Object();
-    private Object lockTwo = new Object();
+    private final Object lockOne = new Object();
+    private final Object lockTwo = new Object();
 
     @Override
     public String deadLock() {

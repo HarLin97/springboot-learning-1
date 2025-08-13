@@ -20,7 +20,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class CompareDataWithBloomServiceImpl extends BaseCompareDataService {
 
 
-    private Map<String,User> originUserMap = new ConcurrentHashMap<>();
+    private final Map<String,User> originUserMap = new ConcurrentHashMap<>();
 
 
     @Override

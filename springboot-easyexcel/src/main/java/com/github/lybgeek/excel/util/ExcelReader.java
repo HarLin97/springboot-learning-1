@@ -14,17 +14,17 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ExcelReader {
 
-    private InputStream inputStream;
+    private final InputStream inputStream;
 
-    private int sheetNo;
+    private final int sheetNo;
 
     //headRowNumber 需要读的表格有几行头数据。默认有一行头，也就是认为第二行开始起为数据。
-    private int headRowNumber;
+    private final int headRowNumber;
 
-    private String fileName;
+    private final String fileName;
 
     //表格标题行数,默认0
-    private int titleRows;
+    private final int titleRows;
 
 
 

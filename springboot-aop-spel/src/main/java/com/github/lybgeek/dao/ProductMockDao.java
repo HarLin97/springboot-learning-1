@@ -11,9 +11,9 @@ import java.util.concurrent.atomic.LongAdder;
 
 @Repository
 public class ProductMockDao {
-    private LongAdder idIncrService = new LongAdder();
+    private final LongAdder idIncrService = new LongAdder();
 
-    private static Map<Long, Product> mockDb = new ConcurrentHashMap<>();
+    private static final Map<Long, Product> mockDb = new ConcurrentHashMap<>();
 
     public Product save(Product product) {
         if(Objects.isNull(product.getId()) || !mockDb.containsKey(product.getId())){

@@ -21,11 +21,11 @@ import org.apache.commons.lang3.StringUtils;
 public class BaseAnalysisEventListener<T> extends AnalysisEventListener<T> {
 
     @Getter
-    private ExcelData<T> excelData;
+    private final ExcelData<T> excelData;
 
-    private List<T> rows = new ArrayList<>();
+    private final List<T> rows = new ArrayList<>();
 
-    private List<ErrorExcelRow> errorExcelRows = new ArrayList<>();
+    private final List<ErrorExcelRow> errorExcelRows = new ArrayList<>();
 
 
     public BaseAnalysisEventListener() {

@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 public class ComsumePipelineServiceProxy implements InvocationHandler {
     
-    private List<HandlerInvotation> handlerInvotations;
+    private final List<HandlerInvotation> handlerInvotations;
 
     public ComsumePipelineServiceProxy(List<HandlerInvotation> handlerInvotations) {
         this.handlerInvotations = handlerInvotations;

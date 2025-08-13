@@ -26,7 +26,7 @@ public class NamingService {
     private final static String SEPARATOR = ":";
     private final DiscoveryClient discoveryClient;
 
-    private AtomicInteger localPort = new AtomicInteger();
+    private final AtomicInteger localPort = new AtomicInteger();
 
     public List<PeerUri> discover(String serviceId,boolean isExludeSelfUri){
         List<ServiceInstance> instances = discoveryClient.getInstances(serviceId);

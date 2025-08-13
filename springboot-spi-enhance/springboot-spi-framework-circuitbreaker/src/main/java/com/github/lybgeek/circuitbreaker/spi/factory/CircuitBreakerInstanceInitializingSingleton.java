@@ -14,9 +14,9 @@ public class CircuitBreakerInstanceInitializingSingleton implements SmartInitial
 
     private DefaultListableBeanFactory beanFactory;
 
-    private CircuitBreakerExtensionFactory circuitBreakerExtensionFactory;
+    private final CircuitBreakerExtensionFactory circuitBreakerExtensionFactory;
 
-    private InterceptorHandler interceptorHandler;
+    private final InterceptorHandler interceptorHandler;
 
 
     public CircuitBreakerInstanceInitializingSingleton(CircuitBreakerExtensionFactory circuitBreakerExtensionFactory, InterceptorHandler interceptorHandler) {

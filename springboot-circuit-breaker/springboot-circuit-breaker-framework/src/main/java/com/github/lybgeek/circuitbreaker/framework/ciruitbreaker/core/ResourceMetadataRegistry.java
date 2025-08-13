@@ -15,15 +15,15 @@ public final class ResourceMetadataRegistry {
     }
 
     static MethodWrapper lookupFallback(Class<?> clazz, String name) {
-        return (MethodWrapper)FALLBACK_MAP.get(getKey(clazz, name));
+        return FALLBACK_MAP.get(getKey(clazz, name));
     }
 
     static MethodWrapper lookupDefaultFallback(Class<?> clazz, String name) {
-        return (MethodWrapper)DEFAULT_FALLBACK_MAP.get(getKey(clazz, name));
+        return DEFAULT_FALLBACK_MAP.get(getKey(clazz, name));
     }
 
     static MethodWrapper lookupBlockHandler(Class<?> clazz, String name) {
-        return (MethodWrapper)BLOCK_HANDLER_MAP.get(getKey(clazz, name));
+        return BLOCK_HANDLER_MAP.get(getKey(clazz, name));
     }
 
     static void updateFallbackFor(Class<?> clazz, String name, Method method) {

@@ -16,7 +16,7 @@ public class ServerAddrEnvironmentPostProcessor implements EnvironmentPostProces
 
 
 
-    private String SERVER_ADDRESS = "server.addr";
+    private final String SERVER_ADDRESS = "server.addr";
 
     @Override
     @SneakyThrows

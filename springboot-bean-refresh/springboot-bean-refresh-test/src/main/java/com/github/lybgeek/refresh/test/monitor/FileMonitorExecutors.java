@@ -17,8 +17,6 @@ import java.nio.file.Path;
 import java.nio.file.WatchEvent;
 import java.util.concurrent.TimeUnit;
 
-;
-
 
 @Slf4j
 public final class FileMonitorExecutors {

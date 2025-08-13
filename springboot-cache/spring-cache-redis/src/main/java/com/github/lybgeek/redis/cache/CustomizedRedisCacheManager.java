@@ -21,8 +21,8 @@ import java.util.stream.Collectors;
  **/
 public class CustomizedRedisCacheManager extends RedisCacheManager {
 
-    private RedisCacheWriter redisCacheWriter;
-    private RedisCacheConfiguration defaultRedisCacheConfiguration;
+    private final RedisCacheWriter redisCacheWriter;
+    private final RedisCacheConfiguration defaultRedisCacheConfiguration;
     private RedisOperations redisOperations;
 
     public CustomizedRedisCacheManager(

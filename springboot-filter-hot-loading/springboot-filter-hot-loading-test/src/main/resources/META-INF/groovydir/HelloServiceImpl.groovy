@@ -1,12 +1,12 @@
-package com.github.lybgeek.service.impl;
+package com.github.lybgeek.service.impl
 
-import com.github.lybgeek.service.HelloService;
+import com.github.lybgeek.service.HelloService
 
 
-public class HelloServiceImpl implements HelloService {
+class HelloServiceImpl implements HelloService {
     @Override
-    public String say(String username) {
+    String say(String username) {
         println ("hello:" + username)
-        return "hello:" + username;
+        return "hello:" + username
     }
 }

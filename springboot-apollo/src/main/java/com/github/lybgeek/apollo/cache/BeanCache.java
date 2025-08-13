@@ -27,9 +27,9 @@ public class BeanCache implements ApplicationContextAware {
 
     private ApplicationContext applicationContext;
 
-    private Map<String,Class> conditionalClassesMap = new ConcurrentHashMap<>();
+    private final Map<String,Class> conditionalClassesMap = new ConcurrentHashMap<>();
 
-    private Map<String,Class> refreshBeanClassesMap = new ConcurrentHashMap<>();
+    private final Map<String,Class> refreshBeanClassesMap = new ConcurrentHashMap<>();
 
 
 

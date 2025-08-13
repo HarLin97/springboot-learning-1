@@ -8,6 +8,7 @@ import org.springframework.core.env.PropertiesPropertySource;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
 @Slf4j
@@ -18,7 +19,7 @@ public class CustomEnvironmentPostProcessor implements EnvironmentPostProcessor 
         Properties properties = new Properties();
 
         try {
-            properties.load(new InputStreamReader(CustomEnvironmentPostProcessor.class.getClassLoader().getResourceAsStream("custom.properties"),"UTF-8"));
+            properties.load(new InputStreamReader(CustomEnvironmentPostProcessor.class.getClassLoader().getResourceAsStream("custom.properties"), StandardCharsets.UTF_8));
 
             PropertiesPropertySource propertiesPropertySource = new PropertiesPropertySource("custom",properties);
             environment.getPropertySources().addLast(propertiesPropertySource);

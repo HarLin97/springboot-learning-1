@@ -24,15 +24,15 @@ import java.util.Map;
 
 public class CustomizedRedisCacheManager extends RedisCacheManager implements BeanFactoryAware {
 
-    private Map<String, RedisCacheConfiguration> initialCacheConfigurations;
+    private final Map<String, RedisCacheConfiguration> initialCacheConfigurations;
 
-    private RedisTemplate cacheRedisTemplate;
+    private final RedisTemplate cacheRedisTemplate;
 
-    private RedisCacheWriter cacheWriter;
+    private final RedisCacheWriter cacheWriter;
 
     private DefaultListableBeanFactory beanFactory;
 
-    private RedisCacheConfiguration defaultCacheConfiguration;
+    private final RedisCacheConfiguration defaultCacheConfiguration;
 
     protected CachedInvocation cachedInvocation;
 

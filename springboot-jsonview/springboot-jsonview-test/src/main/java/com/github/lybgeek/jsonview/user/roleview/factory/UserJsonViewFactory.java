@@ -13,7 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class UserJsonViewFactory implements JsonViewFactory {
 
-    private Map<String,Class<? extends PublicJsonView>> jsonViewClassMap = new ConcurrentHashMap<>();
+    private final Map<String,Class<? extends PublicJsonView>> jsonViewClassMap = new ConcurrentHashMap<>();
     @Override
     public Class<? extends PublicJsonView> getJsonViewClass(HttpServletRequest request,Object... body) {
         String token = request.getHeader("token");

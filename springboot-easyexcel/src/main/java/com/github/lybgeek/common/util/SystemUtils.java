@@ -13,11 +13,7 @@ public class SystemUtils {
    */
   public static boolean isWinOs(){
     String os = System.getProperty("os.name");
-    if(os.toLowerCase().startsWith("win")){
-       return true;
-    }
-
-    return false;
+      return os.toLowerCase().startsWith("win");
 
   }
 

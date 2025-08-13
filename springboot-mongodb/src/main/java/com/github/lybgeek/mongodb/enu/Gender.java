@@ -9,9 +9,9 @@ public enum Gender {
 
   MALE(1, "男"), FEMALE(0, "女"),DEFAULT(2,"未知");
 
-  private int value;
+  private final int value;
 
-  private String desc;
+  private final String desc;
 
   public static Gender getValue(int value){
     for(Gender gender : values()){

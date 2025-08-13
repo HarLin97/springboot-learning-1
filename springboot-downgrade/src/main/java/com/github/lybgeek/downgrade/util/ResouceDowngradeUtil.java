@@ -29,7 +29,7 @@ public enum ResouceDowngradeUtil {
 
   public static final String MAX_THRESHOLD_KEY = "maxThreshold";
 
-  private Map<String, ResouceDowngrade> resouceId2AnnotaionMap = new ConcurrentHashMap<>();
+  private final Map<String, ResouceDowngrade> resouceId2AnnotaionMap = new ConcurrentHashMap<>();
 
   public void init(){
     Reflections reflections = new Reflections(packageName,new MethodAnnotationsScanner());

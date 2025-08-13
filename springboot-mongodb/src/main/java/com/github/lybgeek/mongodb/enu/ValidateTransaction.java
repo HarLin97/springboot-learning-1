@@ -9,8 +9,8 @@ public enum  ValidateTransaction {
 
   YES("1", "是"), NO("0", "否");
 
-  private String value;
+  private final String value;
 
-  private String desc;
+  private final String desc;
 
 }

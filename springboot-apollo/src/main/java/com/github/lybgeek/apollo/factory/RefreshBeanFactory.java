@@ -110,10 +110,7 @@ public class RefreshBeanFactory implements BeanFactoryPostProcessor {
 
     private boolean isConditionalOnPropertyKey(Config config,String conditionalOnPropertyKey){
         Set<String> propertyNames = config.getPropertyNames();
-        if(!CollectionUtils.isEmpty(propertyNames) && propertyNames.contains(conditionalOnPropertyKey)){
-            return true;
-        }
-        return false;
+        return !CollectionUtils.isEmpty(propertyNames) && propertyNames.contains(conditionalOnPropertyKey);
     }
 
 

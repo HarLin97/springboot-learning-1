@@ -146,7 +146,7 @@ public class OrderPropertiesRefresh implements ApplicationContextAware {
     }
 
     public  <T> T getBean(Class<T> clz) {
-        return (T) applicationContext.getBean(clz);
+        return applicationContext.getBean(clz);
     }
 
     public boolean isExistBean(String beanName){
@@ -183,10 +183,7 @@ public class OrderPropertiesRefresh implements ApplicationContextAware {
 
     private boolean isChangeKey(ConfigChangeEvent changeEvent,String conditionalOnPropertyKey){
         Set<String> changeKeys = changeEvent.changedKeys();
-        if(!CollectionUtils.isEmpty(changeKeys) && changeKeys.contains(conditionalOnPropertyKey)){
-            return true;
-        }
-        return false;
+        return !CollectionUtils.isEmpty(changeKeys) && changeKeys.contains(conditionalOnPropertyKey);
     }
 
     private String getChangeKey(ConfigChangeEvent changeEvent, String[] conditionalOnPropertyKeys){

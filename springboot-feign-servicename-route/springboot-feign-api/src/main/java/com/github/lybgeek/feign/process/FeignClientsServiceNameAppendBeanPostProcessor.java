@@ -20,7 +20,7 @@ public class FeignClientsServiceNameAppendBeanPostProcessor implements BeanPostP
 
     private Environment environment;
 
-    private AtomicInteger atomicInteger = new AtomicInteger();
+    private final AtomicInteger atomicInteger = new AtomicInteger();
 
     @SneakyThrows
     @Override

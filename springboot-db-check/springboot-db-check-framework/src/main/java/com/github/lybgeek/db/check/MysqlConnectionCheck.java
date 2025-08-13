@@ -12,7 +12,7 @@ import java.sql.Connection;
 @Slf4j
 public class MysqlConnectionCheck extends MySqlValidConnectionChecker {
 
-    private ApplicationContext applicationContext;
+    private final ApplicationContext applicationContext;
 
     public MysqlConnectionCheck(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;

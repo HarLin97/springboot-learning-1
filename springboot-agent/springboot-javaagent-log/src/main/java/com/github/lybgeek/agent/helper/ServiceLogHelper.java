@@ -20,13 +20,13 @@ public enum  ServiceLogHelper {
 
     INSTACNE;
 
-    private Log log = LogFactory.getLog(ServiceLogHelper.class);
+    private final Log log = LogFactory.getLog(ServiceLogHelper.class);
 
     private SqlUtils sqlUtils;
 
 
-    private ExecutorService executorService = Executors.newFixedThreadPool(10,new ThreadFactory() {
-        private AtomicInteger atomicInteger = new AtomicInteger(1);
+    private final ExecutorService executorService = Executors.newFixedThreadPool(10,new ThreadFactory() {
+        private final AtomicInteger atomicInteger = new AtomicInteger(1);
         @Override
         public Thread newThread(Runnable r) {
             Thread thread = new Thread(r);

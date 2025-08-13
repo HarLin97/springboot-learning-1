@@ -19,7 +19,7 @@ import java.lang.reflect.Method;
 
 public class DruidDataSourceBeanPostProcessor implements SmartInstantiationAwareBeanPostProcessor, ApplicationContextAware {
 
-    private DataSourceProperties dataSourceProperties;
+    private final DataSourceProperties dataSourceProperties;
 
     private ApplicationContext applicationContext;
 

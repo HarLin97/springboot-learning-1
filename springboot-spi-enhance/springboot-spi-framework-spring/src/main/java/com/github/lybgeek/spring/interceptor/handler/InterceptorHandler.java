@@ -5,7 +5,7 @@ import com.github.lybgeek.interceptor.model.InterceptorChain;
 
 public class InterceptorHandler {
 
-    private InterceptorChain interceptorChain;
+    private final InterceptorChain interceptorChain;
 
     public InterceptorHandler(InterceptorChain interceptorChain) {
         this.interceptorChain = interceptorChain;

@@ -10,7 +10,7 @@ import org.apache.commons.codec.binary.Hex;
  */
 public final class EncryptorUtils {
 
-    private static String secretKey;
+    private static final String secretKey;
 
 
 

@@ -28,9 +28,6 @@ public class BatchConsumerTriggerTemplate implements BatchConsumerTriggerFactory
 
     @Override
     public boolean support(String bufferTriggerBizType) {
-        if(StrUtil.isNotBlank(property.getBufferTriggerBizType()) && property.getBufferTriggerBizType().equals(bufferTriggerBizType)){
-            return true;
-        }
-        return false;
+        return StrUtil.isNotBlank(property.getBufferTriggerBizType()) && property.getBufferTriggerBizType().equals(bufferTriggerBizType);
     }
 }

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class DynamicFeignClientFactory<T> {
 
-    private FeignClientBuilder feignClientBuilder;
+    private final FeignClientBuilder feignClientBuilder;
 
     public DynamicFeignClientFactory(ApplicationContext appContext) {
         this.feignClientBuilder = new FeignClientBuilder(appContext);

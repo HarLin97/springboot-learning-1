@@ -18,7 +18,7 @@ import java.util.concurrent.Executor;
 @Component
 public class AfterCommitTransationCallBackProcess extends TransactionSynchronizationAdapter implements Executor {
     //用于存放同个事务中多个执行事件
-    private ThreadLocal<List<Runnable>> currentRunablesCombineThreadLocal = new ThreadLocal<>();
+    private final ThreadLocal<List<Runnable>> currentRunablesCombineThreadLocal = new ThreadLocal<>();
 
     @Override
     public void execute(Runnable runnable) {

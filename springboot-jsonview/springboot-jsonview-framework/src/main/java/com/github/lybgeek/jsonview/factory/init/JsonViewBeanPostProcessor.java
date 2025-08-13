@@ -26,11 +26,11 @@ import static com.github.lybgeek.jsonview.factory.JsonViewFactory.JSON_VIEW_FACT
 @Slf4j
 public class JsonViewBeanPostProcessor implements SmartInstantiationAwareBeanPostProcessor {
 
-    private ExecutorService executorService = Executors.newSingleThreadExecutor(ThreadUtil.newNamedThreadFactory("json-view-factory-init-thread-", false));
+    private final ExecutorService executorService = Executors.newSingleThreadExecutor(ThreadUtil.newNamedThreadFactory("json-view-factory-init-thread-", false));
     private final DefaultListableBeanFactory defaultListableBeanFactory;
 
     private final JsonViewProperty jsonViewProperty;
-    private AtomicBoolean init = new AtomicBoolean(false);
+    private final AtomicBoolean init = new AtomicBoolean(false);
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {

@@ -17,7 +17,7 @@ public enum UploadContext {
 
    private static final String PACKAGE_NAME = "com.github.lybgeek.upload.strategy.impl";
 
-   private Map<UploadModeEnum,Class<SliceUploadStrategy>> uploadStrategyMap = new ConcurrentHashMap<>();
+   private final Map<UploadModeEnum,Class<SliceUploadStrategy>> uploadStrategyMap = new ConcurrentHashMap<>();
 
 
    public void init(){

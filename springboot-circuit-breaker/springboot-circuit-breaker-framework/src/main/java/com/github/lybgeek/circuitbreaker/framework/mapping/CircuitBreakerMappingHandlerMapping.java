@@ -20,9 +20,9 @@ import java.util.function.Predicate;
 public class CircuitBreakerMappingHandlerMapping extends RequestMappingHandlerMapping {
 
 
-    private RequestMappingInfo.BuilderConfiguration config = new RequestMappingInfo.BuilderConfiguration();
+    private final RequestMappingInfo.BuilderConfiguration config = new RequestMappingInfo.BuilderConfiguration();
 
-    private Map<String, Predicate<Class<?>>> pathPrefixes = new LinkedHashMap<>();
+    private final Map<String, Predicate<Class<?>>> pathPrefixes = new LinkedHashMap<>();
 
     @Nullable
     private StringValueResolver embeddedValueResolver;

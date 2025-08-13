@@ -20,7 +20,7 @@ public final class ThreadPoolUtils {
         // 队列最大长度
         taskExecutor.setQueueCapacity(1000);
         taskExecutor.setThreadFactory(new ThreadFactory() {
-            private AtomicInteger atomicInteger = new AtomicInteger();
+            private final AtomicInteger atomicInteger = new AtomicInteger();
             @Override
             public Thread newThread(Runnable r) {
                 Thread thread = new Thread(r);

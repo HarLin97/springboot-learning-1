@@ -21,7 +21,7 @@ public class ThirdpartyBeanReplaceBeanPostProcessor implements SmartInstantiatio
     @Autowired
     private DefaultListableBeanFactory defaultListableBeanFactory;
 
-    private AtomicBoolean isAlreadyReplace = new AtomicBoolean(false);
+    private final AtomicBoolean isAlreadyReplace = new AtomicBoolean(false);
 
     private final ThirdpartyBeanReplaceProperty thirdpartyBeanReplaceProperty;
 

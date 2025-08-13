@@ -31,10 +31,10 @@ public class ResouceDowngradeAspect {
 
   //---------利用guava的ratelimter进行限流降级------------------------------------//
 
-  private Map<String,RateLimiter> rateLimiterMap = new ConcurrentHashMap<>();
+  private final Map<String,RateLimiter> rateLimiterMap = new ConcurrentHashMap<>();
 
   //存放初始阈值
-  private Map<String,Integer> orginMaxThresholdMap = new ConcurrentHashMap<>();
+  private final Map<String,Integer> orginMaxThresholdMap = new ConcurrentHashMap<>();
 
   private Object downgradeWithRateLimiter(ProceedingJoinPoint pjp, ResouceDowngrade resouceDowngrade)throws Throwable {
 
@@ -85,7 +85,7 @@ public class ResouceDowngradeAspect {
   }
 
   //----------普通计数器进行限流------------------------------------//
-  private Map<String, AtomicInteger> counter = new ConcurrentHashMap<>();
+  private final Map<String, AtomicInteger> counter = new ConcurrentHashMap<>();
   private Object downgrade(ProceedingJoinPoint pjp, ResouceDowngrade resouceDowngrade)throws Throwable{
 
     String signature = pjp.getSignature().toLongString();

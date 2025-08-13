@@ -42,9 +42,9 @@ public enum DateType {
 
     UP_DAY_FOR_YEAR("15", "yyyy-MM-dd");
 
-    private String code;
+    private final String code;
 
-    private String pattern;
+    private final String pattern;
 
     DateType(String code, String pattern) {
         this.code = code;
@@ -64,7 +64,7 @@ public enum DateType {
         return valueOf(name.toUpperCase());
     }
 
-    private static Map<String, DateType> enumMap = new HashMap<>();
+    private static final Map<String, DateType> enumMap = new HashMap<>();
 
     static {
         DateType[] enums = values();

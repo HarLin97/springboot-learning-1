@@ -27,7 +27,7 @@ public class MockUserServiceTest {
     @Autowired
     private MockUserService mockUserService;
 
-    private Faker faker = Faker.instance(Locale.CHINA);
+    private final Faker faker = Faker.instance(Locale.CHINA);
 
 
     @Test

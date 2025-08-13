@@ -14,7 +14,7 @@ import java.util.Set;
 
 public class JsonUtils
 {
-    private static Log log = LogFactory.getLog(JsonUtils.class);
+    private static final Log log = LogFactory.getLog(JsonUtils.class);
     /**
      * @param obj 任意对象
      * @return String

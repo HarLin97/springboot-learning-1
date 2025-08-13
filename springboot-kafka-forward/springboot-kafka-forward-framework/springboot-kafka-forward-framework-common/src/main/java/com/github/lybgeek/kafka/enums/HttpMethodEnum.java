@@ -11,5 +11,5 @@ public enum HttpMethodEnum {
     HEAD,
     OPTIONS,
     TRACE,
-    CONNECT;
+    CONNECT
 }

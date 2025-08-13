@@ -20,9 +20,9 @@ import java.util.Enumeration;
  */
 public class ChainContexthandlerInterceptor implements HandlerInterceptor {
 
-    private ChainContextProperties chainContextProperties;
+    private final ChainContextProperties chainContextProperties;
 
-    private IRequestKeyParser requestKeyParser;
+    private final IRequestKeyParser requestKeyParser;
 
     public ChainContexthandlerInterceptor(ChainContextProperties chainContextProperties, IRequestKeyParser requestKeyParser) {
         this.chainContextProperties = chainContextProperties;

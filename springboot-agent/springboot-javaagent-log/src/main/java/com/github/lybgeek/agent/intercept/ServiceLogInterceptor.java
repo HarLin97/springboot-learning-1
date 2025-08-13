@@ -18,10 +18,10 @@ import java.util.List;
 import java.util.concurrent.Callable;
 
 public class ServiceLogInterceptor {
-    private Log log = LogFactory.getLog(ServiceLogInterceptor.class);
+    private final Log log = LogFactory.getLog(ServiceLogInterceptor.class);
 
 
-    private ServiceLogHelperFactory serviceLogHelperFactory;
+    private final ServiceLogHelperFactory serviceLogHelperFactory;
 
     public ServiceLogInterceptor(ServiceLogHelperFactory serviceLogHelperFactory) {
         this.serviceLogHelperFactory = serviceLogHelperFactory;

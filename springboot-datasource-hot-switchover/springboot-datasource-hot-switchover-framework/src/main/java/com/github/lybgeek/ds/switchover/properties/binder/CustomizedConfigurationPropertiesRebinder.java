@@ -10,7 +10,7 @@ import org.springframework.context.ApplicationContext;
 
 public class CustomizedConfigurationPropertiesRebinder extends ConfigurationPropertiesRebinder {
 
-    private ConfigurationPropertiesBeans beans;
+    private final ConfigurationPropertiesBeans beans;
     public CustomizedConfigurationPropertiesRebinder(ConfigurationPropertiesBeans beans) {
         super(beans);
         this.beans = beans;

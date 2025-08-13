@@ -5,7 +5,7 @@ import com.github.lybgeek.thirdparty.repository.ThirdpartyRepository;
 
 public class ThirdpartyService {
 
-    private ThirdpartyRepository thirdpartyRepository;
+    private final ThirdpartyRepository thirdpartyRepository;
 
     public ThirdpartyService(ThirdpartyRepository thirdpartyRepository) {
         this.thirdpartyRepository = thirdpartyRepository;

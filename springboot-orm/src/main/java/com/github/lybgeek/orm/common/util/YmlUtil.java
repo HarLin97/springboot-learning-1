@@ -11,12 +11,12 @@ public class YmlUtil {
      * key:文件名索引
      * value:配置文件内容
      */
-    private static Map<String, LinkedHashMap> ymls = new HashMap<>();
+    private static final Map<String, LinkedHashMap> ymls = new HashMap<>();
 
     /**
      * string:当前线程需要查询的文件名
      */
-    private static ThreadLocal<String> nowFileName = new ThreadLocal<>();
+    private static final ThreadLocal<String> nowFileName = new ThreadLocal<>();
 
     static {
         loadYml("application.yml");

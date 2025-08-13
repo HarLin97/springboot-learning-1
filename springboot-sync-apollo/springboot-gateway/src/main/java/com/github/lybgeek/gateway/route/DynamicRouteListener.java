@@ -27,7 +27,7 @@ import java.util.ArrayList;
 @Profile(value = "apollo")
 public class DynamicRouteListener implements ApplicationContextAware, ApplicationEventPublisherAware {
 
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     private static final String ID_PATTERN = "spring\\.cloud\\.gateway\\.routes\\[\\d+\\]\\.id";
 

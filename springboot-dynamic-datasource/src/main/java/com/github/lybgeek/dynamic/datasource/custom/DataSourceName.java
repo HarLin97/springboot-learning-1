@@ -13,8 +13,8 @@ import lombok.Getter;
 public enum  DataSourceName {
 	MASTER("master","主机"),SLAVE("slave","备机");
 
-	private String value;
+	private final String value;
 
-	private String desc;
+	private final String desc;
 
 }

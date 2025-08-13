@@ -43,7 +43,6 @@ public class ReceiveRequestParamsListener{
                 ack.acknowledge();
                 return JSONUtil.toJsonStr(result);
             }
-           ;
         }
         return null;
     }

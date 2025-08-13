@@ -12,7 +12,7 @@ public class HttpTemplateComposite {
 
     private List<HttpTemplate> httpTemplates = new ArrayList<>();
 
-    private HttpProperties httpProperties;
+    private final HttpProperties httpProperties;
 
     public HttpTemplateComposite(HttpProperties httpProperties) {
         this.httpProperties = httpProperties;

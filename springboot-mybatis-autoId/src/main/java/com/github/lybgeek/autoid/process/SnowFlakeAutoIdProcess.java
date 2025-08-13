@@ -9,7 +9,7 @@ import java.lang.reflect.Field;
 
 public class SnowFlakeAutoIdProcess extends BaseAutoIdProcess {
 
-    private static Snowflake snowflake = IdUtil.createSnowflake(0,0);
+    private static final Snowflake snowflake = IdUtil.createSnowflake(0,0);
 
 
     public SnowFlakeAutoIdProcess(Field field) {

@@ -11,7 +11,7 @@ import org.springframework.util.StringUtils;
 
 public final class LicenseUtils {
 
-    private static SymmetricCrypto symmetricCrypto;
+    private static final SymmetricCrypto symmetricCrypto;
 
     private LicenseUtils(){
 

@@ -16,7 +16,7 @@ public class ProductTask {
     @Autowired
     private ProductService productService;
 
-    private AtomicInteger atomicInteger = new AtomicInteger();
+    private final AtomicInteger atomicInteger = new AtomicInteger();
 
     @Scheduled(fixedRate = 5000)
     public void run(){

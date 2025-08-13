@@ -35,10 +35,10 @@ import java.util.concurrent.ConcurrentHashMap;
 public class AutoIdInterceptor implements Interceptor {
 
     // key为类名，value：为id执行器
-    private Map<String, List<BaseAutoIdProcess>> idProcessMap = new ConcurrentHashMap<>();
+    private final Map<String, List<BaseAutoIdProcess>> idProcessMap = new ConcurrentHashMap<>();
 
     //key为类名，value为主键名
-    private Map<String,String> primaryKeyMap = new ConcurrentHashMap<>();
+    private final Map<String,String> primaryKeyMap = new ConcurrentHashMap<>();
 
     //批量插入分割符
     private static final String INSERT_BATCH_KEY_SPILTE = ".";
@@ -338,7 +338,7 @@ public class AutoIdInterceptor implements Interceptor {
     }
 
     class BoundSqlSqlSource implements SqlSource {
-        private BoundSqlHelper boundSqlHelper;
+        private final BoundSqlHelper boundSqlHelper;
 
         public BoundSqlSqlSource(BoundSqlHelper boundSqlHelper) {
             this.boundSqlHelper = boundSqlHelper;

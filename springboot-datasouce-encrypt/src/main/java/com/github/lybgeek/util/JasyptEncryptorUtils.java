@@ -10,7 +10,7 @@ public final class JasyptEncryptorUtils {
 
     private static final String salt = "lybgeek";
 
-    private static BasicTextEncryptor basicTextEncryptor = new BasicTextEncryptor();
+    private static final BasicTextEncryptor basicTextEncryptor = new BasicTextEncryptor();
 
     static {
         basicTextEncryptor.setPassword(salt);

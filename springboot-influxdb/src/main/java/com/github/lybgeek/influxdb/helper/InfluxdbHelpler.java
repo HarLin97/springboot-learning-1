@@ -27,9 +27,9 @@ import java.util.List;
 @Slf4j
 public class InfluxdbHelpler {
 
-    private InfluxDB influxDB;
+    private final InfluxDB influxDB;
 
-    private CustomInfluxDbProperties influxDbProperties;
+    private final CustomInfluxDbProperties influxDbProperties;
 
     public InfluxdbHelpler(InfluxDB influxDB, CustomInfluxDbProperties influxDbProperties) {
         this.influxDB = influxDB;
@@ -196,10 +196,7 @@ public class InfluxdbHelpler {
 
     private <T> boolean validate(T entity) {
         Measurement measurement = getMeasurement(entity.getClass());
-        if(ObjectUtil.isNull(measurement)){
-            return true;
-        }
-        return false;
+        return ObjectUtil.isNull(measurement);
     }
 
     /**

@@ -25,7 +25,7 @@ public class HttpUtils {
     private static final String CTYPE_JSON = "application/json; charset=utf-8";
     private static final String charset = "utf-8";
 
-    private static HttpUtils instance = null;
+    private static final HttpUtils instance = null;
 
     public static HttpUtils getInstance() {
         if (instance == null) {
@@ -35,7 +35,7 @@ public class HttpUtils {
     }
 
     
-    public static void main(String[] args) throws SocketTimeoutException, IOException {
+    public static void main(String[] args) throws IOException {
         String resp = getInstance().postJson("http://localhost:8080/test/test", "{\"custCmonId\":\"12345678\",\"custNo\":\"111\",\"custNo111\":\"706923\"}");
         System.out.println(resp);
     }

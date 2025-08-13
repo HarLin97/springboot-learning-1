@@ -5,9 +5,9 @@ import org.springframework.context.ApplicationEvent;
 
 public class PropertyRefreshedEvent extends ApplicationEvent {
 
-    private String propertyKey;
+    private final String propertyKey;
 
-    private Object propertyValue;
+    private final Object propertyValue;
 
 
     /**

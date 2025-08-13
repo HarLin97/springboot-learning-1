@@ -8,7 +8,7 @@ import java.util.List;
 
 public class BeanMapperUtils {
 
-    private static Mapper mapper = DozerBeanMapperBuilder.buildDefault();
+    private static final Mapper mapper = DozerBeanMapperBuilder.buildDefault();
 
     public static <T> T map(Object source, Class<T> destinationClass) {
         if (source == null) {

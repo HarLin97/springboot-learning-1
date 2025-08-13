@@ -33,4 +33,3 @@ public class RpcClientServiceImpl implements RpcClientService {
         return RpcResponse.builder().code(200).msg(msg).build();
     }
 }
-;

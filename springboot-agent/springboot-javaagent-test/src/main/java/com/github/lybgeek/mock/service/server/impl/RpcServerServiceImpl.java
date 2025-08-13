@@ -17,7 +17,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @Service
 public class RpcServerServiceImpl implements RpcServerService {
 
-    private Map<Long, User> mockUserDb = new ConcurrentHashMap<>();
+    private final Map<Long, User> mockUserDb = new ConcurrentHashMap<>();
 
     @Override
     public RpcResponse getUser(Long requestId, Long userId) {

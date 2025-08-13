@@ -12,7 +12,7 @@ import java.sql.Statement;
 
 public class ValidConnectionCheckerAdapter implements ValidConnectionChecker {
 
-    private DbCheckProperies dbCheckProperies;
+    private final DbCheckProperies dbCheckProperies;
 
     public ValidConnectionCheckerAdapter(DbCheckProperies dbCheckProperies) {
         this.dbCheckProperies = dbCheckProperies;

@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class ChainContextConcurrencyStrategy extends HystrixConcurrencyStrategy {
 
-    private HystrixConcurrencyStrategy existingConcurrencyStrategy;
+    private final HystrixConcurrencyStrategy existingConcurrencyStrategy;
 
     public ChainContextConcurrencyStrategy(HystrixConcurrencyStrategy existingConcurrencyStrategy) {
         this.existingConcurrencyStrategy = existingConcurrencyStrategy;

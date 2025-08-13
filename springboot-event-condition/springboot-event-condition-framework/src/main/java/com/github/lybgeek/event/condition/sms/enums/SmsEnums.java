@@ -5,7 +5,7 @@ public enum SmsEnums {
     ALIYUN("aliyun"),
     TENCENT("tencent");
 
-    private String name;
+    private final String name;
 
     SmsEnums(String name) {
         this.name = name;

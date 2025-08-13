@@ -109,6 +109,14 @@
         <module>springboot-fetch-version</module>
         <module>springboot-db-readwrite-splitting</module>
         <module>springboot-togglz</module>
+        <module>springboot-pf4j</module>
+        <module>springboot-request-log</module>
+        <module>springboot-swagger-parse</module>
+        <module>springboot-chain</module>
+        <module>springboot-encrypt</module>
+        <module>springboot-sse</module>
+        <module>springboot-prop-out-config</module>
+        <module>sprinboot-logback-env-isolate</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

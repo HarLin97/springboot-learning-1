@@ -29,9 +29,9 @@ import java.util.List;
 @Deprecated
 public class SpiInstancePostProcessor implements BeanPostProcessor {
 
-    private DefaultListableBeanFactory beanFactory;
+    private final DefaultListableBeanFactory beanFactory;
 
-    private InterceptorHandler interceptorHandler;
+    private final InterceptorHandler interceptorHandler;
 
     public SpiInstancePostProcessor(InterceptorHandler interceptorHandler,DefaultListableBeanFactory beanFactory) {
         this.interceptorHandler = interceptorHandler;

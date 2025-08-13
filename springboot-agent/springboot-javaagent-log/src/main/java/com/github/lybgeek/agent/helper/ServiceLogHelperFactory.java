@@ -16,7 +16,7 @@ import java.util.Properties;
 
 public final class ServiceLogHelperFactory {
 
-    private Properties properties;
+    private final Properties properties;
 
     public ServiceLogHelperFactory(Properties properties) {
         this.properties = properties;

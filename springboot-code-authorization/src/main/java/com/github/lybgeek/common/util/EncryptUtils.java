@@ -9,7 +9,7 @@ import java.io.IOException;
 @Slf4j
 public class EncryptUtils {
 
-    private static String secretKey = "test123456lyb-geek"+System.currentTimeMillis();
+    private static final String secretKey = "test123456lyb-geek"+System.currentTimeMillis();
 
     private EncryptUtils(){}
 

@@ -26,7 +26,7 @@ import java.util.List;
 public class ConfigPropertyFileAlterationListener extends FileAlterationListenerAdaptor {
 
 
-    private ApplicationContext applicationContext;
+    private final ApplicationContext applicationContext;
 
     public ConfigPropertyFileAlterationListener(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;

@@ -8,7 +8,7 @@ import org.springframework.context.ApplicationEventPublisher;
 
 public class MqService {
 
-    private ApplicationEventPublisher applicationEventPublisher;
+    private final ApplicationEventPublisher applicationEventPublisher;
 
     public MqService(ApplicationEventPublisher applicationEventPublisher) {
         this.applicationEventPublisher = applicationEventPublisher;

@@ -28,7 +28,7 @@ import javax.validation.Validator;
  */
 public class ValidatorUtils {
 
-    private static Validator failFastValidator = Validation.byProvider(org.hibernate.validator.HibernateValidator.class)
+    private static final Validator failFastValidator = Validation.byProvider(org.hibernate.validator.HibernateValidator.class)
         .configure()
         .failFast(true)
         .buildValidatorFactory().getValidator();
@@ -36,7 +36,7 @@ public class ValidatorUtils {
     /**
      * 全部校验
      */
-    private static Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
+    private static final Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
 
 
     private ValidatorUtils() {
@@ -61,7 +61,7 @@ public class ValidatorUtils {
             throws BizException {
         Set<ConstraintViolation<Object>> constraintViolations = validator.validate(object, groups);
         if (!constraintViolations.isEmpty()) {
-        	ConstraintViolation<Object> constraint = (ConstraintViolation<Object>)constraintViolations.iterator().next();
+        	ConstraintViolation<Object> constraint = constraintViolations.iterator().next();
             throw new BizException(constraint.getMessage());
         }
     }

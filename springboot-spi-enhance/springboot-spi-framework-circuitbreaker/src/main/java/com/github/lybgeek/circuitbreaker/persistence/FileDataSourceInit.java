@@ -109,29 +109,29 @@ public class FileDataSourceInit implements InitFunc {
         ModifyParamFlowRulesCommandHandler.setWritableDataSource(paramFlowRuleWDS);
     }
 
-    private Converter<String, List<FlowRule>> flowRuleListParser = source -> JSON.parseObject(
+    private final Converter<String, List<FlowRule>> flowRuleListParser = source -> JSON.parseObject(
         source,
         new TypeReference<List<FlowRule>>() {
         }
     );
-    private Converter<String, List<DegradeRule>> degradeRuleListParser = source -> JSON.parseObject(
+    private final Converter<String, List<DegradeRule>> degradeRuleListParser = source -> JSON.parseObject(
         source,
         new TypeReference<List<DegradeRule>>() {
         }
     );
-    private Converter<String, List<SystemRule>> systemRuleListParser = source -> JSON.parseObject(
+    private final Converter<String, List<SystemRule>> systemRuleListParser = source -> JSON.parseObject(
         source,
         new TypeReference<List<SystemRule>>() {
         }
     );
 
-    private Converter<String, List<AuthorityRule>> authorityRuleListParser = source -> JSON.parseObject(
+    private final Converter<String, List<AuthorityRule>> authorityRuleListParser = source -> JSON.parseObject(
         source,
         new TypeReference<List<AuthorityRule>>() {
         }
     );
 
-    private Converter<String, List<ParamFlowRule>> paramFlowRuleListParser = source -> JSON.parseObject(
+    private final Converter<String, List<ParamFlowRule>> paramFlowRuleListParser = source -> JSON.parseObject(
         source,
         new TypeReference<List<ParamFlowRule>>() {
         }

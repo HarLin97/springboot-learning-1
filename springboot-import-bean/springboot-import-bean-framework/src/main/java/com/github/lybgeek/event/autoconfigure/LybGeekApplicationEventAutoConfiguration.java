@@ -40,7 +40,7 @@ public class LybGeekApplicationEventAutoConfiguration{
         threadPoolTaskExecutor.setMaxPoolSize(10);
         threadPoolTaskExecutor.setQueueCapacity(100);
         threadPoolTaskExecutor.setThreadFactory(new ThreadFactory() {
-            private AtomicInteger atomicInteger = new AtomicInteger();
+            private final AtomicInteger atomicInteger = new AtomicInteger();
             @Override
             public Thread newThread(Runnable r) {
                 Thread thread = new Thread(r);

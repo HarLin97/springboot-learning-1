@@ -104,17 +104,13 @@ public class HttpClientProxy implements MethodInterceptor {
                             RemotePathParam remotePathParam = (RemotePathParam) annotation;
                             String pathParam = BRACKETS_PREFIX + remotePathParam.value() + BRACKETS_SUBFIX;
                             path = StringUtils.replace(path, pathParam, param.toString());
-                            if (params.containsKey(paramName)) {
-                                params.remove(paramName);
-                            }
+                            params.remove(paramName);
                         }
 
                         if (annotation.annotationType().equals(RemoteReqHeader.class)) {
                             RemoteReqHeader remoteReqHeader = (RemoteReqHeader) annotation;
                             headers.put(remoteReqHeader.value(), param.toString());
-                            if (params.containsKey(paramName)) {
-                                params.remove(paramName);
-                            }
+                            params.remove(paramName);
                         }
                     }
             }

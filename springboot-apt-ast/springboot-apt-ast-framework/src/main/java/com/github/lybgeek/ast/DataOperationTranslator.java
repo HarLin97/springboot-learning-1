@@ -12,9 +12,9 @@ import com.sun.tools.javadoc.Messager;
 
 public class DataOperationTranslator extends TreeTranslator {
 
-    private Messager mMessager;
-    private TreeMaker treeMaker;
-    private Names names;
+    private final Messager mMessager;
+    private final TreeMaker treeMaker;
+    private final Names names;
 
     public DataOperationTranslator(Messager mMessager, TreeMaker treeMaker, Names names) {
         this.mMessager = mMessager;
@@ -246,13 +246,13 @@ public class DataOperationTranslator extends TreeTranslator {
 
     private Name getterMethodName(JCTree.JCVariableDecl jcVariableDecl){
         String varName = jcVariableDecl.name.toString();
-        Name name = names.fromString("get" + varName.substring(0, 1).toUpperCase() + varName.substring(1, varName.length()));
+        Name name = names.fromString("get" + varName.substring(0, 1).toUpperCase() + varName.substring(1));
         return name;
     }
 
     private Name setterMethodName(JCTree.JCVariableDecl jcVariableDecl){
         String varName = jcVariableDecl.name.toString();
-        Name name = names.fromString("set" + varName.substring(0, 1).toUpperCase() + varName.substring(1, varName.length()));
+        Name name = names.fromString("set" + varName.substring(0, 1).toUpperCase() + varName.substring(1));
         return name;
     }
 

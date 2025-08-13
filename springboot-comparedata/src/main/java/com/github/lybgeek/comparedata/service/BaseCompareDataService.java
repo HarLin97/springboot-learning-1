@@ -22,7 +22,7 @@ public abstract class BaseCompareDataService implements CompareDataService{
         StopWatch stopWatchUser = new StopWatch();
         stopWatchUser.start("stopWatchUser");
         List<User> users = userService.list();
-        stopWatchUser.stop();;
+        stopWatchUser.stop();
         System.out.println("stopWatchUser -> costTime:" + stopWatchUser.getTotalTimeSeconds());
 
         List<MockUser> mockUsers = mockUserService.list();

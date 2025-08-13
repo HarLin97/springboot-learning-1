@@ -16,7 +16,7 @@ public class MethodWrapper {
     }
 
     static MethodWrapper none() {
-        return new MethodWrapper((Method)null, false);
+        return new MethodWrapper(null, false);
     }
 
     Method getMethod() {

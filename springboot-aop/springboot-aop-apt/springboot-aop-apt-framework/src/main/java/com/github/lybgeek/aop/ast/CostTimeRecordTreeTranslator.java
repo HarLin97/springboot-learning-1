@@ -18,24 +18,24 @@ public class CostTimeRecordTreeTranslator extends TreeTranslator {
     /**
      * 日志输出工具类
      */
-    private Messager meessager;
+    private final Messager meessager;
 
     /**
      * 抽象语法树
      */
-    private JavacTrees trees;
+    private final JavacTrees trees;
 
     /**
      * 封装了创建或者修改AST节点的一些方法
      */
-    private TreeMaker treeMaker;
+    private final TreeMaker treeMaker;
 
     /**
      * 封装了操作标识符的方法
      */
-    private Names names;
+    private final Names names;
 
-    private JCTree.JCMethodDecl methodDecl;
+    private final JCTree.JCMethodDecl methodDecl;
 
     public CostTimeRecordTreeTranslator(Messager meessager, JavacTrees trees, TreeMaker treeMaker, Names names, JCTree.JCMethodDecl jcMethodDecl) {
         this.meessager = meessager;

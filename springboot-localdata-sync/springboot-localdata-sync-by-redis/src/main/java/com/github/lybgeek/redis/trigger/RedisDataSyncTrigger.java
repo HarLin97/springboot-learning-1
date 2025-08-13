@@ -14,6 +14,8 @@ import org.springframework.context.event.EventListener;
 import org.springframework.data.redis.connection.RedisConnection;
 import org.springframework.data.redis.core.RedisTemplate;
 
+import java.nio.charset.StandardCharsets;
+
 import static com.github.lybgeek.redis.constant.RedisConstant.REDIS_CHANNEL_KEY;
 
 @Slf4j
@@ -51,7 +53,7 @@ public class RedisDataSyncTrigger extends BaseDataSyncTrigger implements Command
     private void doSubscribe() {
         RedisConnection connection = redisTemplate.getConnectionFactory().getConnection();
         RedisMessageListener redisMessageListener = applicationContext.getBean(RedisMessageListener.class);
-        connection.subscribe(redisMessageListener,REDIS_CHANNEL_KEY.getBytes("utf-8"));
+        connection.subscribe(redisMessageListener,REDIS_CHANNEL_KEY.getBytes(StandardCharsets.UTF_8));
         log.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Register listen channel : 【{}】",REDIS_CHANNEL_KEY);
     }
 }

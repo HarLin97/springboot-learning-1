@@ -25,7 +25,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class CustomizedRedisCache extends RedisCache {
 
 
-    private RedisOperations redisOperations;
+    private final RedisOperations redisOperations;
 
     private static final Lock REFRESH_CACKE_LOCK = new ReentrantLock();
 

@@ -22,7 +22,7 @@ public class ChainContextBeanPostProcessor implements BeanPostProcessor {
             if (LOG.isDebugEnabled()) {
                 LOG.debug("add ChainContextHttpRequestInterceptor to RestTemplate");
             }
-            RestTemplate restTemplate = RestTemplate.class.cast(bean);
+            RestTemplate restTemplate = (RestTemplate) bean;
             restTemplate.getInterceptors().add(new ChainContextHttpRequestInterceptor());
             return restTemplate;
         }

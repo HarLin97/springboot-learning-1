@@ -16,7 +16,7 @@ public final class GenerateNewJavaFile {
 
     }
 
-    private static Map<String, List<BeanInfo>> beanInfoCache = new HashMap<>();
+    private static final Map<String, List<BeanInfo>> beanInfoCache = new HashMap<>();
 
     public static void generate(Filer filer,Elements elementUtils, Set<? extends Element> elements){
         for (Element element : elements) {
@@ -77,7 +77,7 @@ public final class GenerateNewJavaFile {
         BeanInfo info = infos.get(0);
 
         // 生成的文件名(类名)
-        String className = info.getSimpleClassName()+ "CostTimeRecoder";;
+        String className = info.getSimpleClassName()+ "CostTimeRecoder";
 
         // 方法
         MethodSpec.Builder methodSpecBuilder = MethodSpec.methodBuilder(info.getMethodName())

@@ -8,8 +8,8 @@ public enum DecimalFransformUtil {
 
     INSTANCE;
 
-    private static char[] array = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
-    private static String numStr = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    private static final char[] array = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
+    private static final String numStr = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 
     /**
@@ -40,7 +40,7 @@ public enum DecimalFransformUtil {
      * @return
      */
     public long otherRadixConvertToDecimal(String str,int radix){
-        char ch[] = str.toCharArray();
+        char[] ch = str.toCharArray();
         int len = ch.length;
         long result = 0;
         if (radix == 10) {
@@ -60,7 +60,7 @@ public enum DecimalFransformUtil {
     /**
      * 初始化其他进制数据，索引位置代表字符的数值
      */
-    private static String chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    private static final String chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
     /**
      * 将10进制数字转为其他进制

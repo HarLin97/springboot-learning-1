@@ -32,8 +32,8 @@ public class DbCheckService implements InitializingBean, ApplicationContextAware
     private ApplicationContext applicationContext;
 
 
-    private ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor(new ThreadFactory() {
-        private AtomicInteger atomicInteger = new AtomicInteger();
+    private final ScheduledExecutorService executorService = Executors.newSingleThreadScheduledExecutor(new ThreadFactory() {
+        private final AtomicInteger atomicInteger = new AtomicInteger();
         @Override
         public Thread newThread(Runnable r) {
             Thread thread = new Thread(r, "dbcheck-pool-" + atomicInteger.getAndIncrement());

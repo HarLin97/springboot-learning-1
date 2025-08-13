@@ -14,9 +14,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Component
 public class CacheContextEvent implements ApplicationListener<ContextRefreshedEvent> {
 
-    private AtomicInteger atomicInteger = new AtomicInteger();
+    private final AtomicInteger atomicInteger = new AtomicInteger();
 
-    private ScheduledExecutorService executorService = Executors.newScheduledThreadPool(10, runnable -> {
+    private final ScheduledExecutorService executorService = Executors.newScheduledThreadPool(10, runnable -> {
         Thread thread = new Thread(runnable);
         thread.setName("cache-pool-"+atomicInteger.getAndIncrement());
         return thread;
@@ -24,7 +24,7 @@ public class CacheContextEvent implements ApplicationListener<ContextRefreshedEv
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        executorService.scheduleWithFixedDelay((Runnable) () -> {
+        executorService.scheduleWithFixedDelay(() -> {
             LocalCache.INSTANCE.printCacheInfo();
         },5,5, TimeUnit.SECONDS);
     }

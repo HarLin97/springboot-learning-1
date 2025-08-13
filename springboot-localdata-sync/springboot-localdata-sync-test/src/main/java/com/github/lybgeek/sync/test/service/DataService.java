@@ -16,7 +16,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 @Slf4j
 public class DataService {
 
-    private List<Object> dataList = new CopyOnWriteArrayList<>();
+    private final List<Object> dataList = new CopyOnWriteArrayList<>();
 
     private final RedisTemplate redisTemplate;
 

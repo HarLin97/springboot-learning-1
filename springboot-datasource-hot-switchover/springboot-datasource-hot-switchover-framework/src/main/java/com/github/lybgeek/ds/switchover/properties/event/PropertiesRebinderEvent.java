@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class PropertiesRebinderEvent extends ApplicationEvent {
 
-    private Set<String> keys;
+    private final Set<String> keys;
 
     public PropertiesRebinderEvent(Set<String> keys) {
         // Backwards compatible constructor with less utility (practically no use at all)

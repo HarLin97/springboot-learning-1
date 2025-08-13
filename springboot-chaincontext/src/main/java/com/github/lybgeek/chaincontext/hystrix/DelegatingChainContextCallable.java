@@ -10,7 +10,7 @@ public final class DelegatingChainContextCallable<V> implements Callable<V>{
 
     private final Callable<V> delegate;
     
-    private Map<String, Object> chaincontextAttributes;
+    private final Map<String, Object> chaincontextAttributes;
     
     public DelegatingChainContextCallable(Callable<V> delegate, Map<String, Object> chaincontextAttributes) {
         this.delegate = delegate;

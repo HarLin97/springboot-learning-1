@@ -30,12 +30,12 @@ public class ServiceLogAgent {
 
         AgentBuilder.Transformer transformer = (builder, typeDescription, classLoader, javaModule) -> {
             return builder
-                    .method(ElementMatchers.<MethodDescription>any()) // 拦截任意方法
+                    .method(ElementMatchers.any()) // 拦截任意方法
                     .intercept(MethodDelegation.to(new ServiceLogInterceptor(serviceLogHelperFactory))); // 委托
         };
 
         AgentBuilder.Listener listener = new AgentBuilder.Listener() {
-            private Log log = LogFactory.getLog(AgentBuilder.Listener.class);
+            private final Log log = LogFactory.getLog(AgentBuilder.Listener.class);
 
             @Override
             public void onDiscovery(String s, ClassLoader classLoader, JavaModule javaModule, boolean b) {

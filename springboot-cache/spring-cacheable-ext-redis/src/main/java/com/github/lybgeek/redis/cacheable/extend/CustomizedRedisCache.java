@@ -21,7 +21,7 @@ import java.util.concurrent.locks.ReentrantLock;
 @Slf4j
 public class CustomizedRedisCache extends RedisCache {
 
-    private ReentrantLock lock = new ReentrantLock();
+    private final ReentrantLock lock = new ReentrantLock();
 
     public CustomizedRedisCache(String name, RedisCacheWriter cacheWriter, RedisCacheConfiguration cacheConfig) {
         super(name, cacheWriter,cacheConfig);

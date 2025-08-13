@@ -12,7 +12,7 @@ public final class NumberUtils {
 
     private NumberUtils(){}
 
-    private static Pattern pattern = Pattern.compile("[^0-9]");
+    private static final Pattern pattern = Pattern.compile("[^0-9]");
 
     public static List<Integer> extractDigits(String str){
         List<Integer> digitList = new ArrayList<>();

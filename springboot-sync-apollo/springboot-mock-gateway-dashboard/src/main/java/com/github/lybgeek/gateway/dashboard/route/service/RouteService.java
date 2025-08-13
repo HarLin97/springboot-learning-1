@@ -139,7 +139,7 @@ public class RouteService {
             openItemDTO.setDataChangeCreatedTime(new Date());
             apolloOpenApiClient.createItem(appInfoProperties.getAppId(),appInfoProperties.getEnv(),appInfoProperties.getClusterName(),appInfoProperties.getNameSpaceName(),openItemDTO);
         }
-        apolloOpenApiClient.updateItem(appInfoProperties.getAppId(),appInfoProperties.getEnv(),appInfoProperties.getClusterName(),appInfoProperties.getNameSpaceName(),openItemDTO);;
+        apolloOpenApiClient.updateItem(appInfoProperties.getAppId(),appInfoProperties.getEnv(),appInfoProperties.getClusterName(),appInfoProperties.getNameSpaceName(),openItemDTO);
 
     }
 

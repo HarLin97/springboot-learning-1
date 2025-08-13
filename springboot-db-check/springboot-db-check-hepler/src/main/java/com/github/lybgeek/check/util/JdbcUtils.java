@@ -15,7 +15,7 @@ public final class JdbcUtils  {
 
     private static final Properties DRIVER_URL_MAPPING = new Properties();
 
-    private static Boolean mysql_driver_version_6   = null;
+    private static final Boolean mysql_driver_version_6   = null;
 
     private static final String MYSQL = "mysql";
     private static final String MYSQL_DRIVER               = "com.mysql.jdbc.Driver";

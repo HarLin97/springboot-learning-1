@@ -15,7 +15,7 @@ public class SpiAnnotationPostProcessor implements BeanDefinitionRegistryPostPro
 
     private Environment environment;
 
-    private String[] basePackages;
+    private final String[] basePackages;
 
     public SpiAnnotationPostProcessor(String[] basePackages) {
         this.basePackages = basePackages;

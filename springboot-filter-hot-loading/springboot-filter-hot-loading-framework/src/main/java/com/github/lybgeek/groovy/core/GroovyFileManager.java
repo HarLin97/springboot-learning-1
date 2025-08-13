@@ -55,7 +55,7 @@ public class GroovyFileManager<T> {
         this.groovyLoader = groovyLoader;
         this.groovyProperties = groovyProperties;
         ThreadFactory tf = new ThreadFactory() {
-            AtomicInteger index = new AtomicInteger();
+            final AtomicInteger index = new AtomicInteger();
             @Override
             public Thread newThread(Runnable runnable) {
                 Thread thread = new Thread(runnable);
@@ -166,7 +166,7 @@ public class GroovyFileManager<T> {
                     return groovyLoader.putObject(file);
                 }
                 catch(Exception e) {
-                    LOG.error("Error loading groovy files from disk! file = " + String.valueOf(file), e);
+                    LOG.error("Error loading groovy files from disk! file = " + file, e);
                     return false;
                 }
             });

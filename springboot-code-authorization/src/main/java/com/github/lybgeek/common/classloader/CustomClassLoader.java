@@ -14,9 +14,9 @@ public class CustomClassLoader extends ClassLoader{
     /**
      * 授权码
      */
-    private String secretKey;
+    private final String secretKey;
 
-    private String SECRETKEY_PREFIX = "lyb-geek";
+    private final String SECRETKEY_PREFIX = "lyb-geek";
 
 
     /**

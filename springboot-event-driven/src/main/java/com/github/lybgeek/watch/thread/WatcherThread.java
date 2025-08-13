@@ -14,7 +14,7 @@ import java.nio.file.WatchService;
 public class WatcherThread implements Runnable {
 
 
-	private WatchService watchService;
+	private final WatchService watchService;
 
 	public WatcherThread(WatchService watchService) {
 		this.watchService = watchService;

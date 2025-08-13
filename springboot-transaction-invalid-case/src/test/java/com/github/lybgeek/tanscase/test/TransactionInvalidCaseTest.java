@@ -198,7 +198,7 @@ public class TransactionInvalidCaseTest {
     public void testStatic() {
         TranInvalidCaseWithFinalAndStaticMethod tranInvalidCaseWithFinalAndStaticMethod = applicationContext.getBean(TranInvalidCaseWithFinalAndStaticMethod.class);
         UserService userService = applicationContext.getBean(UserService.class);
-        boolean isSuccess = tranInvalidCaseWithFinalAndStaticMethod.save(user,userService);
+        boolean isSuccess = TranInvalidCaseWithFinalAndStaticMethod.save(user,userService);
         Assert.assertTrue(isSuccess);
 
     }

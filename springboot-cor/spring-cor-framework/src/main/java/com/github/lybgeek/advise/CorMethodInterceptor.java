@@ -8,7 +8,7 @@ import org.aopalliance.intercept.MethodInvocation;
 
 public class CorMethodInterceptor implements MethodInterceptor {
 
-    private CorHandlerInterceptor corHandlerInterceptor;
+    private final CorHandlerInterceptor corHandlerInterceptor;
 
     public CorMethodInterceptor(CorHandlerInterceptor corHandlerInterceptor) {
         this.corHandlerInterceptor = corHandlerInterceptor;

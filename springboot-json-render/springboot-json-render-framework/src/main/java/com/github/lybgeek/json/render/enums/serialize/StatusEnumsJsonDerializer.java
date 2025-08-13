@@ -13,7 +13,7 @@ public class StatusEnumsJsonDerializer extends JsonDeserializer<StatusEnums> {
 
 
     @Override
-    public StatusEnums deserialize(JsonParser p, DeserializationContext ctx) throws IOException, JsonProcessingException {
+    public StatusEnums deserialize(JsonParser p, DeserializationContext ctx) throws IOException {
          if(p.getText() != null){
              return StatusEnums.getByCode(Integer.valueOf(p.getText()));
          }

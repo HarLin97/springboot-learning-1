@@ -16,7 +16,7 @@ public enum HttpClientContext {
    INSTANCE;
 
 
-   private Map<HttpclientTypeEnum,Class<HttpClientStrategy>> strategyMap = new ConcurrentHashMap<>();
+   private final Map<HttpclientTypeEnum,Class<HttpClientStrategy>> strategyMap = new ConcurrentHashMap<>();
 
 
    public void init(String packageName){

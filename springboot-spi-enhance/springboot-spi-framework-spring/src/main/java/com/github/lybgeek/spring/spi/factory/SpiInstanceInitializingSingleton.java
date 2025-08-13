@@ -13,7 +13,7 @@ public class SpiInstanceInitializingSingleton implements SmartInitializingSingle
 
     private DefaultListableBeanFactory beanFactory;
 
-    private InterceptorHandler interceptorHandler;
+    private final InterceptorHandler interceptorHandler;
 
     public SpiInstanceInitializingSingleton(InterceptorHandler interceptorHandler) {
         this.interceptorHandler = interceptorHandler;

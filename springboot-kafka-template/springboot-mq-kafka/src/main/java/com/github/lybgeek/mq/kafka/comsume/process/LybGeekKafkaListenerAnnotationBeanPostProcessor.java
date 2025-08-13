@@ -779,7 +779,7 @@ public class LybGeekKafkaListenerAnnotationBeanPostProcessor<K, V>
 
 			ConfigurableBeanFactory cbf =
 					LybGeekKafkaListenerAnnotationBeanPostProcessor.this.beanFactory instanceof ConfigurableBeanFactory ?
-							(ConfigurableBeanFactory) LybGeekKafkaListenerAnnotationBeanPostProcessor.this.beanFactory :
+							LybGeekKafkaListenerAnnotationBeanPostProcessor.this.beanFactory :
 							null;
 
 

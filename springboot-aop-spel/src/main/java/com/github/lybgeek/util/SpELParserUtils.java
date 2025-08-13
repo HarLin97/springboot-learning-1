@@ -23,12 +23,12 @@ public final class SpELParserUtils {
     /**
      * 表达式解析器
      */
-    private static ExpressionParser expressionParser = new SpelExpressionParser();
+    private static final ExpressionParser expressionParser = new SpelExpressionParser();
 
     /**
      *  参数名解析器，用于获取参数名
      */
-    private static DefaultParameterNameDiscoverer parameterNameDiscoverer = new DefaultParameterNameDiscoverer();
+    private static final DefaultParameterNameDiscoverer parameterNameDiscoverer = new DefaultParameterNameDiscoverer();
 
 
 

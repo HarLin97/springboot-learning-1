@@ -13,11 +13,11 @@ public enum SqlUtils {
 
     INSTANCE;
 
-    private Log log = LogFactory.getLog(SqlUtils.class);
+    private final Log log = LogFactory.getLog(SqlUtils.class);
 
     private DbPropeties dbPropeties;
 
-    private ThreadLocal<Connection> threadLocal = new ThreadLocal<>();
+    private final ThreadLocal<Connection> threadLocal = new ThreadLocal<>();
 
 
     public SqlUtils build(DbPropeties dbPropeties){

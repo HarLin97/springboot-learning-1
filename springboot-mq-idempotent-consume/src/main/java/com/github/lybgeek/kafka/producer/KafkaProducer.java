@@ -21,11 +21,11 @@ public class KafkaProducer implements CommandLineRunner {
     @Autowired
     private KafkaTemplate kafkaTemplate;
 
-    private int threadNum = 2;
+    private final int threadNum = 2;
 
-    private ExecutorService executorService = Executors.newFixedThreadPool(threadNum);
+    private final ExecutorService executorService = Executors.newFixedThreadPool(threadNum);
 
-    private CountDownLatch countDownLatch = new CountDownLatch(threadNum);
+    private final CountDownLatch countDownLatch = new CountDownLatch(threadNum);
 
 
     @Override

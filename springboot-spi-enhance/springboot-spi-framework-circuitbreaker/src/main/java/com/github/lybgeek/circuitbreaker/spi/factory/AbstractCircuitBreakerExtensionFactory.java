@@ -8,7 +8,7 @@ import com.github.lybgeek.spi.factory.ExtensionFactory;
 public abstract class AbstractCircuitBreakerExtensionFactory implements ExtensionFactory {
 
 
-    private ProxyFactory proxyFactory;
+    private final ProxyFactory proxyFactory;
 
     public AbstractCircuitBreakerExtensionFactory(ProxyFactory proxyFactory) {
         this.proxyFactory = proxyFactory;

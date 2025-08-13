@@ -36,9 +36,7 @@ public class AfterCommitTransationCallBackAspect {
 
         return null;
 
-    };
-
-
+    }
 
 
 }
