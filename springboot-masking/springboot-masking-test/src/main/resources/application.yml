@@ -1,0 +1,6 @@
+server:
+  port: 8082
+
+lybgeek:
+  masking:
+    remote-service-url: http://localhost:8081/
