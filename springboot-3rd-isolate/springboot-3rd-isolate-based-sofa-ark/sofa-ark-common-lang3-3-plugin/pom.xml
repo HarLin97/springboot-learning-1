@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.github.lybgeek</groupId>
+        <artifactId>springboot-3rd-isolate-based-sofa-ark</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>sofa-ark-common-lang3-3-plugin</artifactId>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.low.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>5.1.8.RELEASE</version>
+            <scope>provided</scope>
+        </dependency>
+
+
+
+        <!-- SOFA Ark 插件依赖 -->
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>sofa-ark-api</artifactId>
+            <version>${sofa.ark.version}</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.alipay.sofa</groupId>
+                <artifactId>sofa-ark-plugin-maven-plugin</artifactId>
+                <version>${sofa.ark.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>ark-plugin</goal>
+                        </goals>
+                        <configuration>
+                            <!-- 允许将生成的JAR附加到构建产物，以便install -->
+                            <attach>true</attach>
+                            <classifier>ark-plugin</classifier>
+
+                            <!--can only configure no more than one activator-->
+                            <activator>com.github.lybgeek.common.lang33.activator.SamplePluginActivator</activator>
+
+                            <!-- 配置导入类、资源 -->
+                            <imported>
+                                <!-- <imported> 的作用：指定插件需要优先从外部（主程序或其他插件）加载的类 / 包，而非使用自身的依赖。 -->
+<!--                                <classes>-->
+<!--                                    <class>com.github.lybgeek.common.util.LangInfoUtil</class>-->
+<!--                                </classes>-->
+
+                                <!--                            &lt;!&ndash; 配置需要优先从其他 ark plugin 加载的 class &ndash;&gt;-->
+                                <!--                            <classes>-->
+                                <!--                                <class>com.alipay.sofa.rpc.config.ProviderConfig</class>-->
+                                <!--                            </classes>-->
+
+                                <!--                            &lt;!&ndash; 配置需要优先从其他 ark plugin 加载的资源 &ndash;&gt;-->
+                                <!--                            <resources>-->
+                                <!--                                <resource>META-INF/spring/bean.xml</resource>>-->
+                                <!--                            </resources>-->
+                            </imported>
+
+
+                            <!-- configure exported class -->
+                            <exported>
+                                <!-- configure package-level exported class-->
+                                <packages>
+                                    <package>org.springframework.*</package>
+                                </packages>
+
+                                <!-- configure class-level exported class -->
+                                <classes>
+                                    <class>com.github.lybgeek.common.lang33.service.CommonLang33Service</class>
+                                </classes>
+                            </exported>
+
+                            <!--将指定的 Jar 包 shade 至 ark plugin-->
+<!--                            <shades>-->
+<!--                                <shade>org.apache.commons:commons-lang3:3.3</shade>-->
+<!--                            </shades>-->
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

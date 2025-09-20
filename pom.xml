@@ -118,6 +118,7 @@
         <module>springboot-prop-out-config</module>
         <module>sprinboot-logback-env-isolate</module>
         <module>springboot-masking</module>
+        <module>springboot-3rd-isolate</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

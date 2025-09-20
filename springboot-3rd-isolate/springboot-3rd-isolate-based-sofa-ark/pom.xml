@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.github.lybgeek</groupId>
+        <artifactId>springboot-3rd-isolate</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>springboot-3rd-isolate-based-sofa-ark</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>sofa-ark-common-lang3-13-plugin</module>
+        <module>sofa-ark-common-lang3-3-plugin</module>
+        <module>sofa-ark-mock-biz</module>
+    </modules>
+
+
+    <!-- 核心版本管理 -->
+    <properties>
+        <sofa.ark.version>1.1.6</sofa.ark.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+
+            <!-- SOFA Ark 依赖 -->
+            <dependency>
+                <groupId>com.alipay.sofa</groupId>
+                <artifactId>sofa-ark-spi</artifactId>
+                <version>${sofa.ark.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alipay.sofa</groupId>
+                <artifactId>sofa-ark-springboot-starter</artifactId>
+                <version>${sofa.ark.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alipay.sofa</groupId>
+                <artifactId>sofa-ark-all</artifactId>
+                <version>${sofa.ark.version}</version>
+            </dependency>
+
+
+        </dependencies>
+    </dependencyManagement>
+</project>

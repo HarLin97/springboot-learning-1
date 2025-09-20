@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.github.lybgeek</groupId>
+        <artifactId>springboot-3rd-isolate-based-maven-shade-plugin</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>isolate-based-maven-shade-plugin</artifactId>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3.high.version}</version>
+        </dependency>
+        <!-- Spring Boot 基础依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+
+    </dependencies>
+
+    <!-- 构建配置 -->
+    <build>
+        <!-- 插件配置 -->
+        <plugins>
+            <!-- Maven Shade插件配置 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.1</version>
+
+                <!-- 执行配置 -->
+                <executions>
+                    <execution>
+                        <!-- 在package阶段执行shade目标 -->
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+
+                        <!-- 详细配置 -->
+                        <configuration>
+
+                            <!-- 不生成简化的POM文件 -->
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+
+                            <!-- 不生成带-shaded后缀的JAR -->
+                            <shadedArtifactAttached>false</shadedArtifactAttached>
+
+                            <!-- 指定JAR文件名称，与原JAR保持一致 -->
+                            <finalName>${final.name}</finalName>
+
+                            <!-- 类重定位配置 - 解决类冲突 -->
+                            <relocations>
+
+                                <!-- 重定位Commons Lang库 -->
+                                <relocation>
+                                    <pattern>org.apache.commons.lang3</pattern>
+                                    <shadedPattern>com.github.lybgeek.shaded.org.apache.commons.lang3</shadedPattern>
+                                </relocation>
+                            </relocations>
+
+                            <!-- 资源文件处理 -->
+                            <transformers>
+                                <!-- 处理服务配置文件 -->
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                                <!-- 保留原始 manifest 信息（包含版本等） -->
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <manifestEntries>
+                                        <Implementation-Version>${project.version}</Implementation-Version>
+                                    </manifestEntries>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

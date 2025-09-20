@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.github.lybgeek</groupId>
+        <artifactId>springboot-3rd-isolate-based-sofa-ark</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>sofa-ark-mock-biz</artifactId>
+
+    <dependencies>
+        <!-- 引入插件 -->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>sofa-ark-common-lang3-3-plugin</artifactId>
+            <version>${project.version}</version>
+            <classifier>ark-plugin</classifier>
+        </dependency>
+
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>sofa-ark-common-lang3-13-plugin</artifactId>
+            <version>${project.version}</version>
+            <classifier>ark-plugin</classifier>
+        </dependency>
+
+
+
+
+        <!-- Spring Boot + SOFA Ark 集成 starter -->
+<!--        <dependency>-->
+<!--            <groupId>com.alipay.sofa</groupId>-->
+<!--            <artifactId>sofa-ark-springboot-starter</artifactId>-->
+<!--        </dependency>-->
+
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>sofa-ark-support-starter</artifactId>
+            <version>${sofa.ark.version}</version>
+        </dependency>
+
+
+<!--        <dependency>-->
+<!--            <groupId>com.alipay.sofa</groupId>-->
+<!--            <artifactId>web-ark-plugin</artifactId>-->
+<!--            <version>${sofa.ark.version}</version>-->
+<!--        </dependency>-->
+
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>sofa-ark-all</artifactId>
+            <version>${sofa.ark.version}</version>
+        </dependency>
+
+
+
+
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>sofa-ark-api</artifactId>
+            <version>${sofa.ark.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+
+
+    </dependencies>
+
+
+    <build>
+
+
+        <plugins>
+
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                <version>2.6.6</version>-->
+
+
+<!--                <configuration>-->
+<!--                    <outputDirectory>target</outputDirectory>-->
+<!--                    <classifier>ark-biz</classifier>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>package</id>-->
+<!--                        <goals>-->
+<!--                            <goal>repackage</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+
+            <!-- 主程序打包 -->
+            <plugin>
+                <groupId>com.alipay.sofa</groupId>
+                <artifactId>sofa-ark-maven-plugin</artifactId>
+                <version>${sofa.ark.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                        <configuration>
+                            <mainClass>com.github.lybgeek.sofa.ark.test.SofaSrkIsolateApplication</mainClass>
+                            <!--default none-->
+                            <arkClassifier>executable-ark</arkClassifier>
+
+
+
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
