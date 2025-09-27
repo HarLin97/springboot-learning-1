@@ -14,6 +14,8 @@ springboot实战系列暂时先更新到这边，下边是对之前springboot实
 
 [聊聊springboot项目脱离配置中心如何实现属性动态刷新](https://mp.weixin.qq.com/s/gO7cFZzvtiHmulAdDYzvtw?token=520744409&lang=zh_CN)
 
+[超详细！Spring Boot 项目与 Togglz 深度整合实现特性开关全攻略](https://mp.weixin.qq.com/s/gBFFfe68th45s63gYQgZJg?)
+
 
 
 > 2、驱动篇
@@ -51,6 +53,8 @@ springboot实战系列暂时先更新到这边，下边是对之前springboot实
 
 [如何利用mysql5.7提供的虚拟列来提高查询效率](https://mp.weixin.qq.com/s?__biz=MzI1MTY1Njk4NQ==&amp;mid=2247504278&amp;idx=1&amp;sn=2b7c65ff7126c93f5c24cde09767e662&amp;chksm=e9ed3fe0de9ab6f66c75f23caf5c88d05c1b8d14ea2e8c80ed2a3cfe8d43b3bc1850fa81fb6b&token=252819573&lang=zh_CN#rd)
 
+[深度揭秘：Java 应用程序中实现数据库读写分离的高效策略与实战](https://mp.weixin.qq.com/s/IdS-loRnpsHayGY9WViITw?)
+
 
 
 > 5、nosql整合篇
@@ -83,6 +87,7 @@ springboot实战系列暂时先更新到这边，下边是对之前springboot实
 
 [springboot实战之swagger整合](https://mp.weixin.qq.com/s?__biz=MzI1MTY1Njk4NQ==&mid=2247488019&idx=1&sn=99c10cbc99d72825811c8f908296e5d0&chksm=e9eefc65de9975737dcbecfa08a86b41c1a4ba7c80d8ec9fcb64759ca3191a1f1acc3a54a19f&scene=21#wechat_redirect)
 
+[高效解析 Swagger，轻松优化接口平台发布流程，你还不知道？](https://mp.weixin.qq.com/s/rY-l8-J32Zfx7Iatv7lxAg?)
 
 > 8、定时任务调度篇
 
@@ -138,6 +143,8 @@ springboot实战系列暂时先更新到这边，下边是对之前springboot实
 
 [聊聊gitlab ci如何构建以时间为版本号的docker镜像](https://mp.weixin.qq.com/s/Ehg10fcVmwlpzG_Sp43O3g?token=520744409&lang=zh_CN)
 
+[搞不定 Docker 部署 SeaTunnel？这些坑与解法你得知道！](https://mp.weixin.qq.com/s/Lk6NpE8QucqJ67EOIEJ1_A?)
+
 
 
 > 11、安全篇
@@ -151,6 +158,8 @@ springboot实战系列暂时先更新到这边，下边是对之前springboot实
 [聊聊如何进行代码混淆](https://mp.weixin.qq.com/s?__biz=MzI1MTY1Njk4NQ==&amp;mid=2247501464&amp;idx=1&amp;sn=cebaefdfea75b3a585ef018e4b25b280&amp;chksm=e9ed28eede9aa1f81de294faa101516c9966cd547da913390ef813042b329ec27a04483dee25&token=252819573&lang=zh_CN#rd)
 
 [推荐一款代码依赖包安全漏洞检查插件](https://mp.weixin.qq.com/s?__biz=MzI1MTY1Njk4NQ==&amp;mid=2247503095&amp;idx=1&amp;sn=4bf35f9cb13e8b054822d2d018a75326&amp;chksm=e9ed2281de9aab97ee50432d77ab85622f1f57261808fdad0f81738b99431aecd8228ecf218e&token=252819573&lang=zh_CN#rd)
+
+[深度揭秘！Java Class 文件加密终极指南，有效保护你的核心代码](https://mp.weixin.qq.com/s/5OenrQfMGi6BLtkL5ndeVw?)
 
 
 > 12、微服务篇
@@ -226,6 +235,10 @@ springboot实战系列暂时先更新到这边，下边是对之前springboot实
 
 [聊聊maven指定version区间的妙用](https://mp.weixin.qq.com/s/qOxiEEGfQatc7vVmfbwqlQ?token=520744409&lang=zh_CN)
 
+[聊聊springboot项目如何结合maven profile实现多环境切换](https://mp.weixin.qq.com/s/MMiZfsyXWofx81k_k2KjwQ?)
+
+[如何以低侵入方式获取业务系统使用的二方包版本号](https://mp.weixin.qq.com/s/I-8qlU67i0I4WO733hIDRg?)
+
 
 > 15、学习成长篇
 
@@ -249,6 +262,8 @@ springboot实战系列暂时先更新到这边，下边是对之前springboot实
 
 [聊聊如何利用服务定位器模式按需返回我们需要的服务实例](https://mp.weixin.qq.com/s?__biz=MzI1MTY1Njk4NQ==&amp;mid=2247512729&amp;idx=1&amp;sn=9ef7706f6d57ecfe7cff1e7617f6a2e2&amp;chksm=e9ed5cefde9ad5f98b2e602ed0f15b10e252b7848460800c96bc7fcccddd38da138532d8619f&token=1117228521&lang=zh_CN#rd)
 
+[超详细！Spring Boot 项目借助 PF4J 实现插件动态加载，打造灵活可扩展架构](https://mp.weixin.qq.com/s/7uFEL5VpVbP4N485qYCCWA?)
+
 > 17、消息队列
 
 [springboot结合kakfa演示消息队列的消费幂等性如何保证](https://mp.weixin.qq.com/s?__biz=MzI1MTY1Njk4NQ==&mid=2247492142&idx=1&sn=67a708e07d2efbe3e7d3524b7156a825&chksm=e9ed0c58de9a854e109a15be1a271af4d27f532873f65c7fb8ed147900c58b8f37afaf8f5d20&token=912953533&lang=zh_CN#rd)
@@ -258,6 +273,10 @@ springboot实战系列暂时先更新到这边，下边是对之前springboot实
 [聊聊如何实现一个带幂等模板的kafka消费者监听](https://mp.weixin.qq.com/s?__biz=MzI1MTY1Njk4NQ==&amp;mid=2247503134&amp;idx=1&amp;sn=00d206708a15f048303f814e01b2ccec&amp;chksm=e9ed2368de9aaa7e9e585e29964b61c80a80075b8bc5427e94191ca8bec7cf99bd5418ac0137&token=252819573&lang=zh_CN#rd)
 
 [聊聊在springboot项目中如何配置多个kafka消费者](https://mp.weixin.qq.com/s?__biz=MzI1MTY1Njk4NQ==&amp;mid=2247504312&amp;idx=1&amp;sn=9ebfc032ce56c45b05a2b12b3473c653&amp;chksm=e9ed3fcede9ab6d837644a2ccea2a088d274b39431e557064c59f3d38803238c8cb4dca5cfcf&token=252819573&lang=zh_CN#rd)
+
+[聊聊如何利用kafka实现请求-响应模式](https://mp.weixin.qq.com/s/zxgDxSt7BS92f9cye6nZvA?)
+
+
 
 
 > 18、K8S
@@ -322,6 +341,12 @@ springboot实战系列暂时先更新到这边，下边是对之前springboot实
 
 [聊聊springboot项目出现同名bean异常报错如何修复](https://mp.weixin.qq.com/s/o3PkdXHcM0i40_-GVDoIhw?token=520744409&lang=zh_CN)
 
+[深度揭秘！硬件负载均衡配置业务健康检测 400 状态码问题的惊险排查之旅](https://mp.weixin.qq.com/s/_CI32STWW1wFSWYVmts2YA)
+
+[踩坑实录！Spring AOP切点表达式失效之谜及高效修复攻略](https://mp.weixin.qq.com/s/CpLQdpU22Xy5LneMI3F7Og?)
+
+[记一次springcloud gateway记录日志响应结果乱码问题](https://mp.weixin.qq.com/s/VPPZu3NHnZi1OKCDMAJU2w?)
+
 
 
 > 21、其他
@@ -373,6 +398,37 @@ springboot实战系列暂时先更新到这边，下边是对之前springboot实
 [聊聊如何实现可插拔AOP](https://mp.weixin.qq.com/s/TESGq1Vsidx2neUQxTWimA?token=520744409&lang=zh_CN)
 
 [聊聊如何实现动态加载spring拦截器](https://mp.weixin.qq.com/s/og2s1-B9dyuy-cBbiNqFrw?token=520744409&lang=zh_CN)
+
+[SonarQube 升级 2025.1 后，JDK8 项目扫描翻车？看这篇就稳了](https://mp.weixin.qq.com/s/m3yYjMWZvOvXTet5KCjYyQ?)
+
+[从 “JSON 字段适配噩梦” 到 “Spring Boot 优雅解决方案”，你只差这一篇](https://mp.weixin.qq.com/s/MMT98aHUAHChGuqg5QwUQA?)
+
+[干货来袭！5 分钟学会快速实现责任链，效率直接拉满！](https://mp.weixin.qq.com/s/IT2i53Q411C5AGii8NxAAA?)
+
+[一文吃透！Spring Boot 项目请求日志记录，这几招你绝对不能错过！](https://mp.weixin.qq.com/s/my4sRgDxRH9yQDLlzEw6aw?)
+
+[AI 爆火背后，Spring Boot SSE 推送该怎么学？](https://mp.weixin.qq.com/s/aT9Pzw5Wa4cGXJvvbidLTw?)
+
+[必看！Spring Boot 项目新老版本 Controller 低侵入式切换实战秘籍](https://mp.weixin.qq.com/s/SNyPTRId3uuF3bVJ8q-Zlg?)
+
+[聊聊springboot项目如何优雅进行数据校验](https://mp.weixin.qq.com/s/FAo4FpPJIBmer6VlTavK8g?)
+
+[聊聊在应用层面实现内网穿透功能是否可行](https://mp.weixin.qq.com/s/RTVNrOa2PLq7BhWfVuYrdg?)
+
+[聊聊springboot项目中使用jackson的一些小技巧](https://mp.weixin.qq.com/s/UWVBU98GK__ER_xbjEq2Dg?)
+
+[聊聊我们那些年用过的表达式引擎组件](https://mp.weixin.qq.com/s/uzOcjaaWTpAwB2huXrKaiA?)
+
+[聊聊spring项目如何根据事件条件进行事件分发](https://mp.weixin.qq.com/s/liYOtb3Yr8DgGX7mr72deA?)
+
+[聊聊如何优雅替换第三方提供的spring bean](https://mp.weixin.qq.com/s/85l84N1KA09td8BPYr61TA?)
+
+[聊聊如何实现一个特别的责任链](https://mp.weixin.qq.com/s/5GifoFaysNjSs2flatvpfA?)
+
+[聊聊springboot项目如何细粒度控制API响应值](https://mp.weixin.qq.com/s/OQRO0z-aCtnuTTu6KIR8Uw?)
+
+
+
 
 
 
