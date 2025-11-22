@@ -119,6 +119,7 @@
         <module>sprinboot-logback-env-isolate</module>
         <module>springboot-masking</module>
         <module>springboot-3rd-isolate</module>
+        <module>springboot-json-mix-in</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
